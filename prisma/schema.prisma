@@ -1,0 +1,163 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model Pegawai {
+  id              String    @id @default(uuid())
+  namaLengkap     String
+  username        String    @unique
+  email           String    @unique
+  password        String
+  foto            String
+  telepon         String    @unique
+  alamat          String    
+  role            Role
+  permintaanBarang  PermintaanBarang[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Pelanggan {
+  id              String    @id
+  nama            String
+  telepon         String    @unique
+  email           String?   @unique
+  alamat          String
+  permintaanBarang  PermintaanBarang[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Kategori {
+  id              String    @id @default(uuid())
+  kode            String    @unique
+  nama            String
+  barang          Barang[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Satuan {
+  id              String    @id @default(uuid())
+  kode            String    @unique
+  nama            String
+  barang          Barang[]
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model Barang {
+  id                      String    @id
+  nama                    String
+  kategori_id             String
+  kategori                Kategori  @relation(fields: [kategori_id], references: [id], onDelete: Cascade)
+  satuan_id               String
+  satuan                  Satuan    @relation(fields: [satuan_id], references: [id], onDelete: Cascade)
+  stok                    Int       
+  harga                   Decimal
+  pembelianTerakhir       DateTime
+  nomorLot                DetailNomorLotBarang[]
+  transaksiBarangMasuk    DetailTransaksiBarangMasuk[]
+  transaksiBarangKeluar   DetailTransaksiBarangKeluar[]
+  permintaanBarang        DetailPermintaanBarang[]
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
+}
+
+model NomorLot {
+  id              String    @id @default(uuid())
+  kode            String    @unique
+  barang          DetailNomorLotBarang[]
+  transaksiBarangMasuk  TransaksiBarangMasuk?
+  createdAt       DateTime  @default(now())
+  updatedAt       DateTime  @updatedAt
+}
+
+model DetailNomorLotBarang {
+  nomorLot_id     String
+  nomorLot        NomorLot  @relation(fields: [nomorLot_id], references: [id])
+  barang_id       String
+  barang          Barang    @relation(fields: [barang_id], references: [id])
+
+  @@id([nomorLot_id, barang_id])
+}
+
+model TransaksiBarangMasuk {
+  id              String     @id
+  nomorLot_id     String     @unique
+  nomorLot        NomorLot   @relation(fields: [nomorLot_id], references: [id])
+  barang          DetailTransaksiBarangMasuk[]
+  tanggal         DateTime   
+  hargaTotal      Decimal
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+}
+
+model DetailTransaksiBarangMasuk {
+  transaksiBarangMasuk_id     String
+  transaksiBarangMasuk        TransaksiBarangMasuk    @relation(fields: [transaksiBarangMasuk_id], references: [id])
+  barang_id                   String
+  barang                      Barang                  @relation(fields: [barang_id], references: [id])
+  jumlah                      Int
+  hargaSatuan                 Decimal
+
+  @@id([transaksiBarangMasuk_id, barang_id])
+}
+
+model PermintaanBarang {
+  id                          String      @id @default(uuid())
+  pelanggan_id                String
+  pelanggan                   Pelanggan   @relation(fields: [pelanggan_id], references: [id])
+  tanggal                     DateTime
+  permintaanTerpenuhi         Boolean     @default(false)
+  pegawai_id                  String
+  pegawai                     Pegawai     @relation(fields: [pegawai_id], references: [id])
+  barang                      DetailPermintaanBarang[]
+  transaksiBarangKeluar       TransaksiBarangKeluar?
+  createdAt                   DateTime   @default(now())
+  updatedAt                   DateTime   @updatedAt
+}
+
+model DetailPermintaanBarang {
+  permintaanBarang_id         String
+  permintaanBarang            PermintaanBarang    @relation(fields: [permintaanBarang_id], references: [id])
+  barang_id                   String
+  barang                      Barang              @relation(fields: [barang_id], references: [id])
+  jumlah                      Int
+
+  @@id([permintaanBarang_id, barang_id])
+}
+
+model TransaksiBarangKeluar {
+  id                      String     @id
+  permintaanBarang_id     String     @unique
+  permintaanBarang        PermintaanBarang   @relation(fields: [permintaanBarang_id], references: [id])
+  barang                  DetailTransaksiBarangKeluar[]
+  tanggal                 DateTime   
+  hargaTotal              Decimal
+  createdAt               DateTime   @default(now())
+  updatedAt               DateTime   @updatedAt
+}
+
+model DetailTransaksiBarangKeluar {
+  transaksiBarangKeluar_id    String
+  transaksiBarangKeluar       TransaksiBarangKeluar    @relation(fields: [transaksiBarangKeluar_id], references: [id])
+  barang_id                   String
+  barang                      Barang                  @relation(fields: [barang_id], references: [id])
+  jumlah                      Int
+  hargaSatuan                 Decimal
+
+  @@id([transaksiBarangKeluar_id, barang_id])
+}
+enum Role {
+  ADMIN
+  OWNER
+}
