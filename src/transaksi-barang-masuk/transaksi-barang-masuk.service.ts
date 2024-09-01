@@ -216,6 +216,20 @@ export class TransaksiBarangMasukService {
   }
 
   async remove(id: string) {
-    return `This action removes a #${id} transaksiBarangMasuk`;
+    const detailTransaksiBarangMasuk =
+      await this.prisma.detailTransaksiBarangMasuk.deleteMany({
+        where: {
+          transaksiBarangMasuk_id: id,
+        },
+      });
+
+    const transaksiBarangMasuk = await this.prisma.transaksiBarangMasuk.delete({
+      where: { id },
+    });
+
+    return {
+      data: transaksiBarangMasuk,
+      message: 'Transaksi barang masuk berhasil dihapus',
+    };
   }
 }

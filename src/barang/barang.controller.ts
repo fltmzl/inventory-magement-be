@@ -39,4 +39,9 @@ export class BarangController {
   remove(@Param('id') id: string) {
     return this.barangService.remove(id);
   }
+
+  @Post('update-stock-check-interval')
+  updateStockCheckInterval(@Body('interval') intervalInSeconds: number) {
+    return this.barangService.updateStockCheckInterval(intervalInSeconds);
+  }
 }

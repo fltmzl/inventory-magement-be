@@ -185,8 +185,13 @@ export class TransaksiBarangKeluarService {
     };
   }
 
-  findOne(id: string) {
-    return `This action returns a #${id} transaksiBarangKeluar`;
+  async findOne(id: string) {
+    const transaksiBarangKeluar =
+      await this.prisma.transaksiBarangKeluar.findUnique({
+        where: { id },
+      });
+
+    return transaksiBarangKeluar;
   }
 
   update(
@@ -196,7 +201,22 @@ export class TransaksiBarangKeluarService {
     return `This action updates a #${id} transaksiBarangKeluar`;
   }
 
-  remove(id: string) {
-    return `This action removes a #${id} transaksiBarangKeluar`;
+  async remove(id: string) {
+    const detailTransaksiBarangKeluar =
+      await this.prisma.detailTransaksiBarangKeluar.deleteMany({
+        where: {
+          transaksiBarangKeluar_id: id,
+        },
+      });
+
+    const transaksiBarangKeluar =
+      await this.prisma.transaksiBarangKeluar.delete({
+        where: { id },
+      });
+
+    return {
+      data: transaksiBarangKeluar,
+      message: 'Transaksi barang keluar berhasil dihapus',
+    };
   }
 }

@@ -32,7 +32,6 @@ export class TransaksiBarangMasukController {
 
   @Get('report')
   getReport(@Query('from') dateFrom: string, @Query('to') dateTo: string) {
-    console.log('JALAN');
     return this.transaksiBarangMasukService.getReport(
       Number(dateFrom),
       Number(dateTo),

@@ -11,6 +11,8 @@ import { PermintaanBarangModule } from './permintaan-barang/permintaan-barang.mo
 import { TransaksiBarangKeluarModule } from './transaksi-barang-keluar/transaksi-barang-keluar.module';
 import { AuthModule } from './auth/auth.module';
 import { MailerModule } from '@nestjs-modules/mailer';
+import { ScheduleModule } from '@nestjs/schedule';
+import { constant } from './constant';
 // import { EjsAdapter } from '@nestjs-modules/mailer/dist/adapters/ejs.adapter';
 
 @Module({
@@ -24,13 +26,14 @@ import { MailerModule } from '@nestjs-modules/mailer';
     PermintaanBarangModule,
     TransaksiBarangKeluarModule,
     AuthModule,
+    ScheduleModule.forRoot(),
     MailerModule.forRoot({
       transport: {
-        host: 'smtp.gmail.com',
+        host: constant.MAIL.HOST,
         secure: false,
         auth: {
-          user: 'abdulrizki2002@gmail.com',
-          pass: 'yxuvttsnzlyimbaq',
+          user: constant.MAIL.USER,
+          pass: constant.MAIL.PASSWORD,
         },
       },
       defaults: {
