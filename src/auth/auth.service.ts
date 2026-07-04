@@ -15,7 +15,7 @@ export class AuthService {
   async validateUser(email: string, password: string): Promise<any> {
     const user = await this.pegawaiService.findOneByEmail(email);
 
-    if (!user) return null;
+    if (!user.data) return null;
 
     const isPasswordMatch = await bcrypt.compare(password, user.data.password);
 

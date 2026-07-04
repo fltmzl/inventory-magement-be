@@ -78,4 +78,9 @@ export class PelangganService {
       message: 'Data pelanggan telah dihapus',
     };
   }
+  async count(): Promise<number> {
+    const total = await this.prisma.pelanggan.count();
+
+    return total;
+  }
 }

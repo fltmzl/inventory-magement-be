@@ -22,7 +22,6 @@ export class CreatePegawaiDto {
   @IsString()
   password: string;
 
-  @IsNotEmpty()
   @IsString()
   foto: string;
 

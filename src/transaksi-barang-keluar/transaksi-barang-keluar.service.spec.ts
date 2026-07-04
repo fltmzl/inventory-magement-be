@@ -9,7 +9,9 @@ describe('TransaksiBarangKeluarService', () => {
       providers: [TransaksiBarangKeluarService],
     }).compile();
 
-    service = module.get<TransaksiBarangKeluarService>(TransaksiBarangKeluarService);
+    service = module.get<TransaksiBarangKeluarService>(
+      TransaksiBarangKeluarService,
+    );
   });
 
   it('should be defined', () => {

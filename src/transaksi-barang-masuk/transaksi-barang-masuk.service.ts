@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unused-vars */
 import { Injectable } from '@nestjs/common';
 import { CreateTransaksiBarangMasukDto } from './dto/create-transaksi-barang-masuk.dto';
 import { UpdateTransaksiBarangMasukDto } from './dto/update-transaksi-barang-masuk.dto';
@@ -18,23 +19,52 @@ export class TransaksiBarangMasukService {
       jumlah: item.jumlah,
     }));
 
-    const transaksiBarang = await this.prisma.transaksiBarangMasuk.create({
-      data: {
-        id,
-        tanggal,
-        hargaTotal,
-        nomorLot: {
-          create: {
-            kode: nomorLot,
-          },
-        },
-        barang: {
-          createMany: {
-            data: mappedItems,
-          },
-        },
-      },
+    const mappedItemsOnlyIds = barang.map((item) => {
+      return {
+        barang_id: item.id,
+        totalBarang: item.jumlah,
+      };
     });
+
+    const queryForIncrementStock = mappedItems.map((item) => {
+      return this.prisma.barang.update({
+        where: { id: item.barang_id },
+        data: {
+          stok: {
+            increment: item.jumlah,
+          },
+        },
+      });
+    });
+
+    const [transaksiBarang] = await this.prisma.$transaction([
+      // Create transaksi barang masuk
+      this.prisma.transaksiBarangMasuk.create({
+        data: {
+          id,
+          tanggal,
+          hargaTotal,
+          nomorLot: {
+            create: {
+              kode: nomorLot,
+              barang: {
+                createMany: {
+                  data: mappedItemsOnlyIds,
+                },
+              },
+            },
+          },
+          barang: {
+            createMany: {
+              data: mappedItems,
+            },
+          },
+        },
+      }),
+
+      // Update stock
+      ...queryForIncrementStock,
+    ]);
 
     return {
       data: transaksiBarang,
@@ -67,6 +97,9 @@ export class TransaksiBarangMasukService {
             kode: true,
           },
         },
+      },
+      orderBy: {
+        createdAt: 'desc',
       },
     });
 

@@ -6,5 +6,6 @@ import { PrismaService } from 'src/prisma.service';
 @Module({
   controllers: [TransaksiBarangKeluarController],
   providers: [TransaksiBarangKeluarService, PrismaService],
+  exports: [TransaksiBarangKeluarService],
 })
 export class TransaksiBarangKeluarModule {}

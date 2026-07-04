@@ -16,7 +16,7 @@ model Pegawai {
   username        String    @unique
   email           String    @unique
   password        String
-  foto            String
+  foto            String?
   telepon         String    @unique
   alamat          String    
   role            Role
@@ -63,6 +63,7 @@ model Barang {
   satuan                  Satuan    @relation(fields: [satuan_id], references: [id], onDelete: Cascade)
   stok                    Int       
   harga                   Decimal
+  harga_jual              Decimal   @default(0)
   pembelianTerakhir       DateTime
   nomorLot                DetailNomorLotBarang[]
   transaksiBarangMasuk    DetailTransaksiBarangMasuk[]
@@ -77,15 +78,17 @@ model NomorLot {
   kode            String    @unique
   barang          DetailNomorLotBarang[]
   transaksiBarangMasuk  TransaksiBarangMasuk?
+  transaksiBarangKeluar DetailTransaksiBarangKeluar[]
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
 }
 
 model DetailNomorLotBarang {
   nomorLot_id     String
-  nomorLot        NomorLot  @relation(fields: [nomorLot_id], references: [id])
+  nomorLot        NomorLot  @relation(fields: [nomorLot_id], references: [id], onDelete: Cascade)
   barang_id       String
-  barang          Barang    @relation(fields: [barang_id], references: [id])
+  barang          Barang    @relation(fields: [barang_id], references: [id], onDelete: Cascade)
+  totalBarang     Int?      @default(0)
 
   @@id([nomorLot_id, barang_id])
 }
@@ -105,7 +108,7 @@ model DetailTransaksiBarangMasuk {
   transaksiBarangMasuk_id     String
   transaksiBarangMasuk        TransaksiBarangMasuk    @relation(fields: [transaksiBarangMasuk_id], references: [id])
   barang_id                   String
-  barang                      Barang                  @relation(fields: [barang_id], references: [id])
+  barang                      Barang                  @relation(fields: [barang_id], references: [id], onDelete: Cascade)
   jumlah                      Int
   hargaSatuan                 Decimal
 
@@ -128,9 +131,9 @@ model PermintaanBarang {
 
 model DetailPermintaanBarang {
   permintaanBarang_id         String
-  permintaanBarang            PermintaanBarang    @relation(fields: [permintaanBarang_id], references: [id])
+  permintaanBarang            PermintaanBarang    @relation(fields: [permintaanBarang_id], references: [id] , onDelete: Cascade)
   barang_id                   String
-  barang                      Barang              @relation(fields: [barang_id], references: [id])
+  barang                      Barang              @relation(fields: [barang_id], references: [id], onDelete: Cascade)
   jumlah                      Int
 
   @@id([permintaanBarang_id, barang_id])
@@ -151,11 +154,13 @@ model DetailTransaksiBarangKeluar {
   transaksiBarangKeluar_id    String
   transaksiBarangKeluar       TransaksiBarangKeluar    @relation(fields: [transaksiBarangKeluar_id], references: [id])
   barang_id                   String
-  barang                      Barang                  @relation(fields: [barang_id], references: [id])
+  barang                      Barang                  @relation(fields: [barang_id], references: [id], onDelete: Cascade)
+  nomorLot_id                 String
+  nomorLot                    NomorLot                @relation(fields: [nomorLot_id], references: [id], onDelete: Cascade)
   jumlah                      Int
   hargaSatuan                 Decimal
 
-  @@id([transaksiBarangKeluar_id, barang_id])
+  @@id([transaksiBarangKeluar_id, barang_id, nomorLot_id])
 }
 enum Role {
   ADMIN

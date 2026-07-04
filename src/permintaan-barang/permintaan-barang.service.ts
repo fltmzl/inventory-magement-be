@@ -67,6 +67,9 @@ export class PermintaanBarangService {
         pegawai: true,
         pelanggan: true,
       },
+      orderBy: {
+        createdAt: 'desc',
+      },
     });
 
     const mappedPermintaanBarang = permintaanBarang.map((item) => {
@@ -113,6 +116,7 @@ export class PermintaanBarangService {
             barang: {
               select: {
                 nama: true,
+                harga: true,
                 satuan: {
                   select: {
                     nama: true,
@@ -135,6 +139,7 @@ export class PermintaanBarangService {
         nama: barangItem.barang.nama,
         satuan: barangItem.barang.satuan.nama,
         jumlah: barangItem.jumlah,
+        harga: Number(barangItem.barang.harga),
       })),
       pegawai: {
         namaLengkap: permintaanBarang.pegawai.namaLengkap,
@@ -155,11 +160,76 @@ export class PermintaanBarangService {
     };
   }
 
-  update(id: string, updatePermintaanBarangDto: UpdatePermintaanBarangDto) {
-    return `This action updates a #${id} permintaanBarang`;
+  async update(
+    id: string,
+    updatePermintaanBarangDto: UpdatePermintaanBarangDto,
+  ) {
+    const { pegawai_id, pelanggan_id, barang, tanggal } =
+      updatePermintaanBarangDto;
+
+    const mappedItems = barang.map((item) => ({
+      barang_id: item.id,
+      jumlah: item.jumlah,
+    }));
+
+    const [permintaanBarangUpdated] = await this.prisma.$transaction([
+      //  First, Delete detail permintaan barang with selected ID
+      this.prisma.detailPermintaanBarang.deleteMany({
+        where: {
+          permintaanBarang_id: id,
+        },
+      }),
+
+      //  Update table permintaan barang
+      this.prisma.permintaanBarang.update({
+        where: {
+          id,
+        },
+        data: {
+          id,
+          tanggal,
+          pegawai: {
+            connect: {
+              id: pegawai_id,
+            },
+          },
+          pelanggan: {
+            connect: {
+              id: pelanggan_id,
+            },
+          },
+          permintaanTerpenuhi: false,
+          barang: {
+            createMany: {
+              data: mappedItems,
+            },
+          },
+        },
+      }),
+    ]);
+
+    return {
+      data: permintaanBarangUpdated,
+      message: 'Permintaan Barang telah diupdate',
+    };
   }
 
-  remove(id: string) {
-    return `This action removes a #${id} permintaanBarang`;
+  async remove(id: string) {
+    const deletedPermintaanBarang = await this.prisma.permintaanBarang.delete({
+      where: {
+        id,
+      },
+    });
+
+    return {
+      data: deletedPermintaanBarang,
+      message: 'Permintaan Barang telah dihapus',
+    };
+  }
+
+  async count(): Promise<number> {
+    const total = await this.prisma.permintaanBarang.count();
+
+    return total;
   }
 }

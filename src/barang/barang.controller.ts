@@ -25,6 +25,11 @@ export class BarangController {
     return this.barangService.findAll();
   }
 
+  @Get('get-lot-number-id')
+  getLotNumberId() {
+    return this.barangService.getLotNumberId();
+  }
+
   @Get(':id')
   findOne(@Param('id') id: string) {
     return this.barangService.findOne(id);
@@ -43,5 +48,10 @@ export class BarangController {
   @Post('update-stock-check-interval')
   updateStockCheckInterval(@Body('interval') intervalInSeconds: number) {
     return this.barangService.updateStockCheckInterval(intervalInSeconds);
+  }
+
+  @Get('get-low-stock/:maxStock')
+  getLowStock(@Param('maxStock') maxStock: number) {
+    return this.barangService.getLowStock(maxStock);
   }
 }

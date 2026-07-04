@@ -1,0 +1,6273 @@
+{
+  "meta": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-01-31",
+    "notes": "Regenerated preview — corrected CSV source, totals computed, more realistic variety, 15-20 items per permintaan."
+  },
+  "pelanggan": [
+    {
+      "id": "P73528",
+      "nama": "Restoran Truntum",
+      "telepon": "081808786886",
+      "email": "truntum@truntumgama.com",
+      "alamat": "Jl. Sisingamangaraja No.21"
+    },
+    {
+      "id": "P001",
+      "nama": "Restoran GAMA Seafood",
+      "telepon": "085693185670",
+      "email": "info@gamaseafood.com",
+      "alamat": "Jl. M.T. Haryono no. 870A Semarang"
+    }
+  ],
+  "nomor_lot": [
+    {
+      "id": "lot-2026010126-001",
+      "kode": "LOT010126001",
+      "createdAt": "2026-01-01T01:00:00.000Z",
+      "notes": "simulated lot"
+    },
+    {
+      "id": "lot-2026070126-001",
+      "kode": "LOT070126001",
+      "createdAt": "2026-01-07T01:00:00.000Z",
+      "notes": "simulated lot"
+    },
+    {
+      "id": "lot-2026130126-001",
+      "kode": "LOT130126001",
+      "createdAt": "2026-01-13T01:00:00.000Z",
+      "notes": "simulated lot"
+    },
+    {
+      "id": "lot-2026190126-001",
+      "kode": "LOT190126001",
+      "createdAt": "2026-01-19T01:00:00.000Z",
+      "notes": "simulated lot"
+    },
+    {
+      "id": "lot-2026250126-001",
+      "kode": "LOT250126001",
+      "createdAt": "2026-01-25T01:00:00.000Z",
+      "notes": "simulated lot"
+    },
+    {
+      "id": "lot-2026310126-001",
+      "kode": "LOT310126001",
+      "createdAt": "2026-01-31T01:00:00.000Z",
+      "notes": "simulated lot"
+    }
+  ],
+  "transaksi_barang_masuk": [
+    {
+      "id": "TRM010126001",
+      "nomorLot_id": "lot-2026010126-001",
+      "tanggal": "2026-01-01T01:00:00.000Z",
+      "hargaTotal": 21662000
+    },
+    {
+      "id": "TRM070126001",
+      "nomorLot_id": "lot-2026070126-001",
+      "tanggal": "2026-01-07T01:00:00.000Z",
+      "hargaTotal": 20266900
+    },
+    {
+      "id": "TRM130126001",
+      "nomorLot_id": "lot-2026130126-001",
+      "tanggal": "2026-01-13T01:00:00.000Z",
+      "hargaTotal": 19247000
+    },
+    {
+      "id": "TRM190126001",
+      "nomorLot_id": "lot-2026190126-001",
+      "tanggal": "2026-01-19T01:00:00.000Z",
+      "hargaTotal": 24539000
+    },
+    {
+      "id": "TRM250126001",
+      "nomorLot_id": "lot-2026250126-001",
+      "tanggal": "2026-01-25T01:00:00.000Z",
+      "hargaTotal": 19192500
+    },
+    {
+      "id": "TRM310126001",
+      "nomorLot_id": "lot-2026310126-001",
+      "tanggal": "2026-01-31T01:00:00.000Z",
+      "hargaTotal": 21177500
+    }
+  ],
+  "detail_transaksi_barang_masuk": [
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 50,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 31,
+      "hargaSatuan": 34000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 56,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "jumlah": 30,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "jumlah": 52,
+      "hargaSatuan": 38000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 42,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 25,
+      "hargaSatuan": 1500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "jumlah": 31,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 24,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 37,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "jumlah": 29,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "jumlah": 17,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00024",
+      "barang_nama": "Cabai Hijau Besar",
+      "jumlah": 13,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "jumlah": 12,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00079",
+      "barang_nama": "Kacang Panjang",
+      "jumlah": 15,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00186",
+      "barang_nama": "Tempe Daun",
+      "jumlah": 14,
+      "hargaSatuan": 2500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00196",
+      "barang_nama": "Tofu",
+      "jumlah": 9,
+      "hargaSatuan": 7500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 6,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00101",
+      "barang_nama": "kerupuk karak",
+      "jumlah": 5,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 15,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00158",
+      "barang_nama": "rumput laut",
+      "jumlah": 7,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00033",
+      "barang_nama": "Cincau Hitam",
+      "jumlah": 13,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00204",
+      "barang_nama": "ubi ungu",
+      "jumlah": 11,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "jumlah": 13,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "jumlah": 10,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00198",
+      "barang_nama": "Tomat Merah",
+      "jumlah": 5,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00046",
+      "barang_nama": "Daun Singkong rebus",
+      "jumlah": 13,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "jumlah": 15,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM010126001",
+      "barang_id": "BRG00190",
+      "barang_nama": "Tepung mutiara",
+      "jumlah": 7,
+      "hargaSatuan": 23000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 31,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 30,
+      "hargaSatuan": 34000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 19,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "jumlah": 55,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "jumlah": 31,
+      "hargaSatuan": 38000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 46,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 22,
+      "hargaSatuan": 1500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "jumlah": 33,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 42,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 49,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "jumlah": 26,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "jumlah": 28,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00181",
+      "barang_nama": "Tape Ketan",
+      "jumlah": 14,
+      "hargaSatuan": 5000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00170",
+      "barang_nama": "Sereh Besar",
+      "jumlah": 13,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00188",
+      "barang_nama": "Tepung Kanji",
+      "jumlah": 10,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00199",
+      "barang_nama": "tong jae",
+      "jumlah": 11,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00205",
+      "barang_nama": "Wortel Lokal",
+      "jumlah": 8,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00059",
+      "barang_nama": "Jambu Biji",
+      "jumlah": 7,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "jumlah": 8,
+      "hargaSatuan": 4000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00174",
+      "barang_nama": "Strawberry",
+      "jumlah": 12,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00184",
+      "barang_nama": "Telur Puyuh Kupas",
+      "jumlah": 7,
+      "hargaSatuan": 700
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "jumlah": 8,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00125",
+      "barang_nama": "Letuce",
+      "jumlah": 11,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM070126001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "jumlah": 12,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 16,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 35,
+      "hargaSatuan": 34000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 27,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "jumlah": 22,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "jumlah": 21,
+      "hargaSatuan": 38000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 32,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 34,
+      "hargaSatuan": 1500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "jumlah": 32,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 19,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 48,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "jumlah": 34,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "jumlah": 33,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00170",
+      "barang_nama": "Sereh Besar",
+      "jumlah": 13,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00117",
+      "barang_nama": "kunci",
+      "jumlah": 14,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00050",
+      "barang_nama": "fillet paha ayam",
+      "jumlah": 8,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00127",
+      "barang_nama": "Lontong",
+      "jumlah": 9,
+      "hargaSatuan": 4000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00040",
+      "barang_nama": "Daun Melinjo/So",
+      "jumlah": 4,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00137",
+      "barang_nama": "oncom",
+      "jumlah": 15,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "jumlah": 14,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00123",
+      "barang_nama": "Lada hitam",
+      "jumlah": 10,
+      "hargaSatuan": 140000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00021",
+      "barang_nama": "Bumbu gulai",
+      "jumlah": 8,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00055",
+      "barang_nama": "ikan asin layur",
+      "jumlah": 11,
+      "hargaSatuan": 75000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00202",
+      "barang_nama": "Ubi Manis Cilembu",
+      "jumlah": 6,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00115",
+      "barang_nama": "kulit lumpia kecil",
+      "jumlah": 4,
+      "hargaSatuan": 500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "jumlah": 10,
+      "hargaSatuan": 21000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 14,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00174",
+      "barang_nama": "Strawberry",
+      "jumlah": 10,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM130126001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "jumlah": 11,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 38,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 19,
+      "hargaSatuan": 34000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 24,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "jumlah": 27,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "jumlah": 49,
+      "hargaSatuan": 38000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 34,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 36,
+      "hargaSatuan": 1500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "jumlah": 56,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 50,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 58,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "jumlah": 22,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "jumlah": 25,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "jumlah": 6,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00133",
+      "barang_nama": "Nanas",
+      "jumlah": 4,
+      "hargaSatuan": 9000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00099",
+      "barang_nama": "Kentang Besar",
+      "jumlah": 5,
+      "hargaSatuan": 22000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 8,
+      "hargaSatuan": 3500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00036",
+      "barang_nama": "Daun Kenci",
+      "jumlah": 7,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "jumlah": 5,
+      "hargaSatuan": 4000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00035",
+      "barang_nama": "Daun Jeruk",
+      "jumlah": 13,
+      "hargaSatuan": 40000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00112",
+      "barang_nama": "Krecek",
+      "jumlah": 13,
+      "hargaSatuan": 120000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00046",
+      "barang_nama": "Daun Singkong rebus",
+      "jumlah": 7,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "jumlah": 6,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00148",
+      "barang_nama": "Pisang Ambon",
+      "jumlah": 11,
+      "hargaSatuan": 23000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "jumlah": 7,
+      "hargaSatuan": 21000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00041",
+      "barang_nama": "daun pagoda",
+      "jumlah": 14,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00198",
+      "barang_nama": "Tomat Merah",
+      "jumlah": 13,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00066",
+      "barang_nama": "jamur tiram",
+      "jumlah": 15,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00160",
+      "barang_nama": "Sambal Kacang",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00196",
+      "barang_nama": "Tofu",
+      "jumlah": 7,
+      "hargaSatuan": 7500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "jumlah": 7,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00145",
+      "barang_nama": "petai utuh",
+      "jumlah": 4,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00110",
+      "barang_nama": "Kolang Kaling Besar",
+      "jumlah": 12,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00034",
+      "barang_nama": "daun  ginseng",
+      "jumlah": 6,
+      "hargaSatuan": 7000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00075",
+      "barang_nama": "Kacang Hijau Kupas",
+      "jumlah": 15,
+      "hargaSatuan": 40000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00115",
+      "barang_nama": "kulit lumpia kecil",
+      "jumlah": 5,
+      "hargaSatuan": 500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM190126001",
+      "barang_id": "BRG00151",
+      "barang_nama": "pisang klutuk",
+      "jumlah": 11,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 18,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 21,
+      "hargaSatuan": 34000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 16,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "jumlah": 55,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "jumlah": 46,
+      "hargaSatuan": 38000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 28,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 23,
+      "hargaSatuan": 1500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "jumlah": 56,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 19,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 23,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "jumlah": 21,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "jumlah": 30,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00182",
+      "barang_nama": "Tape Singkong",
+      "jumlah": 9,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00026",
+      "barang_nama": "Cabai Keriting",
+      "jumlah": 13,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00120",
+      "barang_nama": "labu kuning",
+      "jumlah": 15,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00174",
+      "barang_nama": "Strawberry",
+      "jumlah": 14,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 7,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00093",
+      "barang_nama": "Kelapa Parut",
+      "jumlah": 4,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 4,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "jumlah": 7,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00136",
+      "barang_nama": "Onclang Besar",
+      "jumlah": 4,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 11,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00091",
+      "barang_nama": "Kelapa kupas utuh",
+      "jumlah": 7,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00126",
+      "barang_nama": "Lobak Putih",
+      "jumlah": 14,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00085",
+      "barang_nama": "Kapulaga",
+      "jumlah": 15,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00145",
+      "barang_nama": "petai utuh",
+      "jumlah": 10,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00186",
+      "barang_nama": "Tempe Daun",
+      "jumlah": 4,
+      "hargaSatuan": 2500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM250126001",
+      "barang_id": "BRG00124",
+      "barang_nama": "laos",
+      "jumlah": 4,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 27,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 36,
+      "hargaSatuan": 34000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 20,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "jumlah": 46,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "jumlah": 23,
+      "hargaSatuan": 38000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 45,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 40,
+      "hargaSatuan": 1500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "jumlah": 42,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 53,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 48,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "jumlah": 22,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "jumlah": 34,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00124",
+      "barang_nama": "laos",
+      "jumlah": 9,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "jumlah": 7,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "jumlah": 14,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00099",
+      "barang_nama": "Kentang Besar",
+      "jumlah": 9,
+      "hargaSatuan": 22000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00191",
+      "barang_nama": "Terasi",
+      "jumlah": 12,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00083",
+      "barang_nama": "Kangkung akar",
+      "jumlah": 6,
+      "hargaSatuan": 5000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "jumlah": 14,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00170",
+      "barang_nama": "Sereh Besar",
+      "jumlah": 4,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "jumlah": 7,
+      "hargaSatuan": 4000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00156",
+      "barang_nama": "Rebung Rajang",
+      "jumlah": 11,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00025",
+      "barang_nama": "Cabai kering",
+      "jumlah": 11,
+      "hargaSatuan": 120000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00145",
+      "barang_nama": "petai utuh",
+      "jumlah": 4,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 9,
+      "hargaSatuan": 3500
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00066",
+      "barang_nama": "jamur tiram",
+      "jumlah": 11,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangMasuk_id": "TRM310126001",
+      "barang_id": "BRG00204",
+      "barang_nama": "ubi ungu",
+      "jumlah": 6,
+      "hargaSatuan": 14000
+    }
+  ],
+  "detail_nomor_lot_barang": [
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "totalBarang": 50
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "totalBarang": 31
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "totalBarang": 56
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "totalBarang": 30
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "totalBarang": 52
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "totalBarang": 42
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "totalBarang": 25
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "totalBarang": 31
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "totalBarang": 24
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "totalBarang": 37
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "totalBarang": 29
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "totalBarang": 17
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00024",
+      "barang_nama": "Cabai Hijau Besar",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "totalBarang": 12
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00079",
+      "barang_nama": "Kacang Panjang",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00186",
+      "barang_nama": "Tempe Daun",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00196",
+      "barang_nama": "Tofu",
+      "totalBarang": 9
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "totalBarang": 6
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00101",
+      "barang_nama": "kerupuk karak",
+      "totalBarang": 5
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00158",
+      "barang_nama": "rumput laut",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00033",
+      "barang_nama": "Cincau Hitam",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00204",
+      "barang_nama": "ubi ungu",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "totalBarang": 10
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00198",
+      "barang_nama": "Tomat Merah",
+      "totalBarang": 5
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00046",
+      "barang_nama": "Daun Singkong rebus",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026010126-001",
+      "barang_id": "BRG00190",
+      "barang_nama": "Tepung mutiara",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "totalBarang": 31
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "totalBarang": 30
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "totalBarang": 19
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "totalBarang": 55
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "totalBarang": 31
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "totalBarang": 46
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "totalBarang": 22
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "totalBarang": 33
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "totalBarang": 42
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "totalBarang": 49
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "totalBarang": 26
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "totalBarang": 28
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00181",
+      "barang_nama": "Tape Ketan",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00170",
+      "barang_nama": "Sereh Besar",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00188",
+      "barang_nama": "Tepung Kanji",
+      "totalBarang": 10
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00199",
+      "barang_nama": "tong jae",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00205",
+      "barang_nama": "Wortel Lokal",
+      "totalBarang": 8
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00059",
+      "barang_nama": "Jambu Biji",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "totalBarang": 8
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00174",
+      "barang_nama": "Strawberry",
+      "totalBarang": 12
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00184",
+      "barang_nama": "Telur Puyuh Kupas",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "totalBarang": 8
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00125",
+      "barang_nama": "Letuce",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026070126-001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "totalBarang": 12
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "totalBarang": 16
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "totalBarang": 35
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "totalBarang": 27
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "totalBarang": 22
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "totalBarang": 21
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "totalBarang": 32
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "totalBarang": 34
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "totalBarang": 32
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "totalBarang": 19
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "totalBarang": 48
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "totalBarang": 34
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "totalBarang": 33
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00170",
+      "barang_nama": "Sereh Besar",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00117",
+      "barang_nama": "kunci",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00050",
+      "barang_nama": "fillet paha ayam",
+      "totalBarang": 8
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00127",
+      "barang_nama": "Lontong",
+      "totalBarang": 9
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00040",
+      "barang_nama": "Daun Melinjo/So",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00137",
+      "barang_nama": "oncom",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00123",
+      "barang_nama": "Lada hitam",
+      "totalBarang": 10
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00021",
+      "barang_nama": "Bumbu gulai",
+      "totalBarang": 8
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00055",
+      "barang_nama": "ikan asin layur",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00202",
+      "barang_nama": "Ubi Manis Cilembu",
+      "totalBarang": 6
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00115",
+      "barang_nama": "kulit lumpia kecil",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "totalBarang": 10
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00174",
+      "barang_nama": "Strawberry",
+      "totalBarang": 10
+    },
+    {
+      "nomorLot_id": "lot-2026130126-001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "totalBarang": 38
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "totalBarang": 19
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "totalBarang": 24
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "totalBarang": 27
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "totalBarang": 49
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "totalBarang": 34
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "totalBarang": 36
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "totalBarang": 56
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "totalBarang": 50
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "totalBarang": 58
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "totalBarang": 22
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "totalBarang": 25
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "totalBarang": 6
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00133",
+      "barang_nama": "Nanas",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00099",
+      "barang_nama": "Kentang Besar",
+      "totalBarang": 5
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "totalBarang": 8
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00036",
+      "barang_nama": "Daun Kenci",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "totalBarang": 5
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00035",
+      "barang_nama": "Daun Jeruk",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00112",
+      "barang_nama": "Krecek",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00046",
+      "barang_nama": "Daun Singkong rebus",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "totalBarang": 6
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00148",
+      "barang_nama": "Pisang Ambon",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00041",
+      "barang_nama": "daun pagoda",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00198",
+      "barang_nama": "Tomat Merah",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00066",
+      "barang_nama": "jamur tiram",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00160",
+      "barang_nama": "Sambal Kacang",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00196",
+      "barang_nama": "Tofu",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00145",
+      "barang_nama": "petai utuh",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00110",
+      "barang_nama": "Kolang Kaling Besar",
+      "totalBarang": 12
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00034",
+      "barang_nama": "daun  ginseng",
+      "totalBarang": 6
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00075",
+      "barang_nama": "Kacang Hijau Kupas",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00115",
+      "barang_nama": "kulit lumpia kecil",
+      "totalBarang": 5
+    },
+    {
+      "nomorLot_id": "lot-2026190126-001",
+      "barang_id": "BRG00151",
+      "barang_nama": "pisang klutuk",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "totalBarang": 18
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "totalBarang": 21
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "totalBarang": 16
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "totalBarang": 55
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "totalBarang": 46
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "totalBarang": 28
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "totalBarang": 23
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "totalBarang": 56
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "totalBarang": 19
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "totalBarang": 23
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "totalBarang": 21
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "totalBarang": 30
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00182",
+      "barang_nama": "Tape Singkong",
+      "totalBarang": 9
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00026",
+      "barang_nama": "Cabai Keriting",
+      "totalBarang": 13
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00120",
+      "barang_nama": "labu kuning",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00174",
+      "barang_nama": "Strawberry",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00093",
+      "barang_nama": "Kelapa Parut",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00136",
+      "barang_nama": "Onclang Besar",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00091",
+      "barang_nama": "Kelapa kupas utuh",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00126",
+      "barang_nama": "Lobak Putih",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00085",
+      "barang_nama": "Kapulaga",
+      "totalBarang": 15
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00145",
+      "barang_nama": "petai utuh",
+      "totalBarang": 10
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00186",
+      "barang_nama": "Tempe Daun",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026250126-001",
+      "barang_id": "BRG00124",
+      "barang_nama": "laos",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "totalBarang": 27
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "totalBarang": 36
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "totalBarang": 20
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00004",
+      "barang_nama": "Asam Jawa",
+      "totalBarang": 46
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00005",
+      "barang_nama": "ayam boiler",
+      "totalBarang": 23
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "totalBarang": 45
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "totalBarang": 40
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00008",
+      "barang_nama": "Bawang Bombay",
+      "totalBarang": 42
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "totalBarang": 53
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "totalBarang": 48
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00011",
+      "barang_nama": "Bawang Putih Kupas",
+      "totalBarang": 22
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00012",
+      "barang_nama": "Bayam",
+      "totalBarang": 34
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00124",
+      "barang_nama": "laos",
+      "totalBarang": 9
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00099",
+      "barang_nama": "Kentang Besar",
+      "totalBarang": 9
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00191",
+      "barang_nama": "Terasi",
+      "totalBarang": 12
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00083",
+      "barang_nama": "Kangkung akar",
+      "totalBarang": 6
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "totalBarang": 14
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00170",
+      "barang_nama": "Sereh Besar",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "totalBarang": 7
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00156",
+      "barang_nama": "Rebung Rajang",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00025",
+      "barang_nama": "Cabai kering",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00145",
+      "barang_nama": "petai utuh",
+      "totalBarang": 4
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "totalBarang": 9
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00066",
+      "barang_nama": "jamur tiram",
+      "totalBarang": 11
+    },
+    {
+      "nomorLot_id": "lot-2026310126-001",
+      "barang_id": "BRG00204",
+      "barang_nama": "ubi ungu",
+      "totalBarang": 6
+    }
+  ],
+  "permintaan_barang": [
+    {
+      "id": "PB010126001",
+      "pelanggan_id": "P001",
+      "tanggal": "2026-01-01T06:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB030126001",
+      "pelanggan_id": "P001",
+      "tanggal": "2026-01-03T06:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB050126001",
+      "pelanggan_id": "P001",
+      "tanggal": "2026-01-05T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB070126001",
+      "pelanggan_id": "P001",
+      "tanggal": "2026-01-07T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB090126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-09T06:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB110126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-11T06:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB130126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-13T06:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB150126001",
+      "pelanggan_id": "P001",
+      "tanggal": "2026-01-15T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB170126001",
+      "pelanggan_id": "P001",
+      "tanggal": "2026-01-17T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB190126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-19T06:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB210126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-21T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB230126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-23T06:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB250126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-25T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB270126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-27T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB290126001",
+      "pelanggan_id": "P001",
+      "tanggal": "2026-01-29T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    },
+    {
+      "id": "PB310126001",
+      "pelanggan_id": "P73528",
+      "tanggal": "2026-01-31T02:00:00.000Z",
+      "permintaanTerpenuhi": true,
+      "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8"
+    }
+  ],
+  "detail_permintaan_barang": [
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00160",
+      "barang_nama": "Sambal Kacang",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00087",
+      "barang_nama": "kecipir",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00064",
+      "barang_nama": "Jamur Salju",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00157",
+      "barang_nama": "Rebung utuh",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00094",
+      "barang_nama": "Kemangi",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00106",
+      "barang_nama": "Kiwi",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00074",
+      "barang_nama": "Kacang Hijau",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00135",
+      "barang_nama": "okra",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00029",
+      "barang_nama": "Cabai Rawit Merah",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00180",
+      "barang_nama": "Taoge Pendek (Bersih)",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00054",
+      "barang_nama": "Gula Merah",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB010126001",
+      "barang_id": "BRG00189",
+      "barang_nama": "tepung ketan",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00103",
+      "barang_nama": "kerupuk udang besar",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00100",
+      "barang_nama": "kentang bulat 18",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00019",
+      "barang_nama": "Brokoli",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00195",
+      "barang_nama": "Timun Jepang / Hijau",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00090",
+      "barang_nama": "kedondong",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00036",
+      "barang_nama": "Daun Kenci",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00119",
+      "barang_nama": "kurma",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00188",
+      "barang_nama": "Tepung Kanji",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00151",
+      "barang_nama": "pisang klutuk",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00124",
+      "barang_nama": "laos",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00093",
+      "barang_nama": "Kelapa Parut",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00132",
+      "barang_nama": "Merica Butir",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00182",
+      "barang_nama": "Tape Singkong",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00102",
+      "barang_nama": "kerupuk terung mentah",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00136",
+      "barang_nama": "Onclang Besar",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00025",
+      "barang_nama": "Cabai kering",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00175",
+      "barang_nama": "tahu pong",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB030126001",
+      "barang_id": "BRG00123",
+      "barang_nama": "Lada hitam",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00118",
+      "barang_nama": "Kunyit",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00101",
+      "barang_nama": "kerupuk karak",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00182",
+      "barang_nama": "Tape Singkong",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00086",
+      "barang_nama": "kayu manis",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00207",
+      "barang_nama": "Ayam Pejantan",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00203",
+      "barang_nama": "Ubi Putih",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00113",
+      "barang_nama": "Krupuk bwg warna",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00037",
+      "barang_nama": "daun ketumbar",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00141",
+      "barang_nama": "Paprika Merah",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00120",
+      "barang_nama": "labu kuning",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00035",
+      "barang_nama": "Daun Jeruk",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00045",
+      "barang_nama": "Daun Salam",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00132",
+      "barang_nama": "Merica Butir",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00049",
+      "barang_nama": "Emping",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00129",
+      "barang_nama": "mangga arumanis",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB050126001",
+      "barang_id": "BRG00194",
+      "barang_nama": "Terong Ungu",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00141",
+      "barang_nama": "Paprika Merah",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00072",
+      "barang_nama": "jinten",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00130",
+      "barang_nama": "mangga muda",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00035",
+      "barang_nama": "Daun Jeruk",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00050",
+      "barang_nama": "fillet paha ayam",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00207",
+      "barang_nama": "Ayam Pejantan",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00080",
+      "barang_nama": "kacang tanah klt ari",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00175",
+      "barang_nama": "tahu pong",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00067",
+      "barang_nama": "Jeruk Lemon",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB070126001",
+      "barang_id": "BRG00198",
+      "barang_nama": "Tomat Merah",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00060",
+      "barang_nama": "jamur hyoko",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00018",
+      "barang_nama": "blewah",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00090",
+      "barang_nama": "kedondong",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00172",
+      "barang_nama": "singkong kupas",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00077",
+      "barang_nama": "Kacang Merah",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00180",
+      "barang_nama": "Taoge Pendek (Bersih)",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00065",
+      "barang_nama": "jamur shitake",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00092",
+      "barang_nama": "Kelapa Muda (Degan)",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00162",
+      "barang_nama": "Sawi Putih",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00058",
+      "barang_nama": "jahe emprit",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00125",
+      "barang_nama": "Letuce",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00179",
+      "barang_nama": "Taoge Panjang (Bersih)",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00186",
+      "barang_nama": "Tempe Daun",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00138",
+      "barang_nama": "Pala Kupas",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB090126001",
+      "barang_id": "BRG00041",
+      "barang_nama": "daun pagoda",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00081",
+      "barang_nama": "Kacang Tanah Kupas",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00060",
+      "barang_nama": "jamur hyoko",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00094",
+      "barang_nama": "Kemangi",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00206",
+      "barang_nama": "Fillet dada ayam",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00126",
+      "barang_nama": "Lobak Putih",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00031",
+      "barang_nama": "Cakue Besar",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00159",
+      "barang_nama": "Salak Pondok",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00199",
+      "barang_nama": "tong jae",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00179",
+      "barang_nama": "Taoge Panjang (Bersih)",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00018",
+      "barang_nama": "blewah",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00050",
+      "barang_nama": "fillet paha ayam",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00152",
+      "barang_nama": "Pisang Mas",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00134",
+      "barang_nama": "Nangka Matang",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00136",
+      "barang_nama": "Onclang Besar",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB110126001",
+      "barang_id": "BRG00027",
+      "barang_nama": "Cabai Merah Besar",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00119",
+      "barang_nama": "kurma",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00144",
+      "barang_nama": "Pepaya Merah",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00062",
+      "barang_nama": "Jamur Kuping",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00100",
+      "barang_nama": "kentang bulat 18",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00083",
+      "barang_nama": "Kangkung akar",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00114",
+      "barang_nama": "kulit lumpia besar",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00126",
+      "barang_nama": "Lobak Putih",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00016",
+      "barang_nama": "Beras ketan",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00034",
+      "barang_nama": "daun  ginseng",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00030",
+      "barang_nama": "Caisim (Sawi Hijau)",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00205",
+      "barang_nama": "Wortel Lokal",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB130126001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00082",
+      "barang_nama": "Kacang Tolo",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00022",
+      "barang_nama": "Buncis",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00154",
+      "barang_nama": "Pisang Susu",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00055",
+      "barang_nama": "ikan asin layur",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00024",
+      "barang_nama": "Cabai Hijau Besar",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00063",
+      "barang_nama": "Jamur Merang",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00168",
+      "barang_nama": "Seledri",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00205",
+      "barang_nama": "Wortel Lokal",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00156",
+      "barang_nama": "Rebung Rajang",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00064",
+      "barang_nama": "Jamur Salju",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00178",
+      "barang_nama": "Taoge Kedelai",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00056",
+      "barang_nama": "Jagung Manis",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00062",
+      "barang_nama": "Jamur Kuping",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00111",
+      "barang_nama": "kolokeling",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00116",
+      "barang_nama": "kulit pangsit",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00083",
+      "barang_nama": "Kangkung akar",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB150126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00098",
+      "barang_nama": "kenikir",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00030",
+      "barang_nama": "Caisim (Sawi Hijau)",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00045",
+      "barang_nama": "Daun Salam",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00094",
+      "barang_nama": "Kemangi",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00154",
+      "barang_nama": "Pisang Susu",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00027",
+      "barang_nama": "Cabai Merah Besar",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00079",
+      "barang_nama": "Kacang Panjang",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00134",
+      "barang_nama": "Nangka Matang",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00143",
+      "barang_nama": "paya",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00172",
+      "barang_nama": "singkong kupas",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB170126001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00030",
+      "barang_nama": "Caisim (Sawi Hijau)",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00184",
+      "barang_nama": "Telur Puyuh Kupas",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00123",
+      "barang_nama": "Lada hitam",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00023",
+      "barang_nama": "Buncis Baby",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00093",
+      "barang_nama": "Kelapa Parut",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00112",
+      "barang_nama": "Krecek",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00166",
+      "barang_nama": "Selada Keriting",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00207",
+      "barang_nama": "Ayam Pejantan",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00144",
+      "barang_nama": "Pepaya Merah",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00172",
+      "barang_nama": "singkong kupas",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00029",
+      "barang_nama": "Cabai Rawit Merah",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00197",
+      "barang_nama": "Tomat Hijau",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB190126001",
+      "barang_id": "BRG00087",
+      "barang_nama": "kecipir",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00052",
+      "barang_nama": "Gembus",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00058",
+      "barang_nama": "jahe emprit",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00085",
+      "barang_nama": "Kapulaga",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 11
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00067",
+      "barang_nama": "Jeruk Lemon",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00156",
+      "barang_nama": "Rebung Rajang",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00038",
+      "barang_nama": "daun koiling",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00108",
+      "barang_nama": "Kol Merah",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00140",
+      "barang_nama": "Paprika kuning",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00175",
+      "barang_nama": "tahu pong",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00158",
+      "barang_nama": "rumput laut",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00014",
+      "barang_nama": "Belimbing Wuluh",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB210126001",
+      "barang_id": "BRG00110",
+      "barang_nama": "Kolang Kaling Besar",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00087",
+      "barang_nama": "kecipir",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00181",
+      "barang_nama": "Tape Ketan",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00100",
+      "barang_nama": "kentang bulat 18",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00055",
+      "barang_nama": "ikan asin layur",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00113",
+      "barang_nama": "Krupuk bwg warna",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00106",
+      "barang_nama": "Kiwi",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00105",
+      "barang_nama": "Ketumbar",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00018",
+      "barang_nama": "blewah",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00153",
+      "barang_nama": "Pisang Raja",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00096",
+      "barang_nama": "Kemiri",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00176",
+      "barang_nama": "Tahu Putih",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00076",
+      "barang_nama": "Kacang Kulit/kc.godog",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB230126001",
+      "barang_id": "BRG00095",
+      "barang_nama": "Kembang Kol",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00196",
+      "barang_nama": "Tofu",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00056",
+      "barang_nama": "Jagung Manis",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00132",
+      "barang_nama": "Merica Butir",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00038",
+      "barang_nama": "daun koiling",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00117",
+      "barang_nama": "kunci",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00091",
+      "barang_nama": "Kelapa kupas utuh",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00076",
+      "barang_nama": "Kacang Kulit/kc.godog",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00054",
+      "barang_nama": "Gula Merah",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00206",
+      "barang_nama": "Fillet dada ayam",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00031",
+      "barang_nama": "Cakue Besar",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00052",
+      "barang_nama": "Gembus",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00195",
+      "barang_nama": "Timun Jepang / Hijau",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB250126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00069",
+      "barang_nama": "Jeruk Nipis",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00096",
+      "barang_nama": "Kemiri",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00121",
+      "barang_nama": "labu putih",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00116",
+      "barang_nama": "kulit pangsit",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00200",
+      "barang_nama": "tusuk sate",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00065",
+      "barang_nama": "jamur shitake",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00088",
+      "barang_nama": "kecombrang",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00137",
+      "barang_nama": "oncom",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00049",
+      "barang_nama": "Emping",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00023",
+      "barang_nama": "Buncis Baby",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00081",
+      "barang_nama": "Kacang Tanah Kupas",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00063",
+      "barang_nama": "Jamur Merang",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB270126001",
+      "barang_id": "BRG00162",
+      "barang_nama": "Sawi Putih",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00160",
+      "barang_nama": "Sambal Kacang",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00158",
+      "barang_nama": "rumput laut",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00117",
+      "barang_nama": "kunci",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00054",
+      "barang_nama": "Gula Merah",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00134",
+      "barang_nama": "Nangka Matang",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00088",
+      "barang_nama": "kecombrang",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00029",
+      "barang_nama": "Cabai Rawit Merah",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00102",
+      "barang_nama": "kerupuk terung mentah",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00118",
+      "barang_nama": "Kunyit",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00109",
+      "barang_nama": "Kol Putih",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00023",
+      "barang_nama": "Buncis Baby",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00176",
+      "barang_nama": "Tahu Putih",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00022",
+      "barang_nama": "Buncis",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00108",
+      "barang_nama": "Kol Merah",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00032",
+      "barang_nama": "Ciciwis",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB290126001",
+      "barang_id": "BRG00194",
+      "barang_nama": "Terong Ungu",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00063",
+      "barang_nama": "Jamur Merang",
+      "jumlah": 6
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00163",
+      "barang_nama": "Sawi Sendok",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00047",
+      "barang_nama": "Dawet",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00081",
+      "barang_nama": "Kacang Tanah Kupas",
+      "jumlah": 5
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00103",
+      "barang_nama": "kerupuk udang besar",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00070",
+      "barang_nama": "Jeruk Pontianak peres",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00095",
+      "barang_nama": "Kembang Kol",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00059",
+      "barang_nama": "Jambu Biji",
+      "jumlah": 7
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00197",
+      "barang_nama": "Tomat Hijau",
+      "jumlah": 8
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00092",
+      "barang_nama": "Kelapa Muda (Degan)",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00115",
+      "barang_nama": "kulit lumpia kecil",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00201",
+      "barang_nama": "Ubi kuning",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00108",
+      "barang_nama": "Kol Merah",
+      "jumlah": 3
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 4
+    },
+    {
+      "permintaanBarang_id": "PB310126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 3
+    }
+  ],
+  "transaksi_barang_keluar": [
+    {
+      "id": "TRK010126001",
+      "permintaanBarang_id": "PB010126001",
+      "tanggal": "2026-01-02T02:00:00.000Z",
+      "hargaTotal": 4197000
+    },
+    {
+      "id": "TRK030126001",
+      "permintaanBarang_id": "PB030126001",
+      "tanggal": "2026-01-04T02:00:00.000Z",
+      "hargaTotal": 3560000
+    },
+    {
+      "id": "TRK050126001",
+      "permintaanBarang_id": "PB050126001",
+      "tanggal": "2026-01-06T02:00:00.000Z",
+      "hargaTotal": 3942000
+    },
+    {
+      "id": "TRK070126001",
+      "permintaanBarang_id": "PB070126001",
+      "tanggal": "2026-01-08T02:00:00.000Z",
+      "hargaTotal": 2731500
+    },
+    {
+      "id": "TRK090126001",
+      "permintaanBarang_id": "PB090126001",
+      "tanggal": "2026-01-10T02:00:00.000Z",
+      "hargaTotal": 5081000
+    },
+    {
+      "id": "TRK110126001",
+      "permintaanBarang_id": "PB110126001",
+      "tanggal": "2026-01-12T02:00:00.000Z",
+      "hargaTotal": 4039000
+    },
+    {
+      "id": "TRK130126001",
+      "permintaanBarang_id": "PB130126001",
+      "tanggal": "2026-01-14T02:00:00.000Z",
+      "hargaTotal": 2413200
+    },
+    {
+      "id": "TRK150126001",
+      "permintaanBarang_id": "PB150126001",
+      "tanggal": "2026-01-16T02:00:00.000Z",
+      "hargaTotal": 4754000
+    },
+    {
+      "id": "TRK170126001",
+      "permintaanBarang_id": "PB170126001",
+      "tanggal": "2026-01-18T02:00:00.000Z",
+      "hargaTotal": 2385000
+    },
+    {
+      "id": "TRK190126001",
+      "permintaanBarang_id": "PB190126001",
+      "tanggal": "2026-01-20T02:00:00.000Z",
+      "hargaTotal": 3706800
+    },
+    {
+      "id": "TRK210126001",
+      "permintaanBarang_id": "PB210126001",
+      "tanggal": "2026-01-22T02:00:00.000Z",
+      "hargaTotal": 2814000
+    },
+    {
+      "id": "TRK230126001",
+      "permintaanBarang_id": "PB230126001",
+      "tanggal": "2026-01-24T02:00:00.000Z",
+      "hargaTotal": 3977600
+    },
+    {
+      "id": "TRK250126001",
+      "permintaanBarang_id": "PB250126001",
+      "tanggal": "2026-01-26T02:00:00.000Z",
+      "hargaTotal": 2344000
+    },
+    {
+      "id": "TRK270126001",
+      "permintaanBarang_id": "PB270126001",
+      "tanggal": "2026-01-28T02:00:00.000Z",
+      "hargaTotal": 3698000
+    },
+    {
+      "id": "TRK290126001",
+      "permintaanBarang_id": "PB290126001",
+      "tanggal": "2026-01-30T02:00:00.000Z",
+      "hargaTotal": 2980200
+    },
+    {
+      "id": "TRK310126001",
+      "permintaanBarang_id": "PB310126001",
+      "tanggal": "2026-02-01T02:00:00.000Z",
+      "hargaTotal": 2240000
+    }
+  ],
+  "detail_transaksi_barang_keluar": [
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00160",
+      "barang_nama": "Sambal Kacang",
+      "jumlah": 5,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00087",
+      "barang_nama": "kecipir",
+      "jumlah": 8,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00064",
+      "barang_nama": "Jamur Salju",
+      "jumlah": 7,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "jumlah": 6,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 7,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 4,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00157",
+      "barang_nama": "Rebung utuh",
+      "jumlah": 5,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 8,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "jumlah": 4,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "jumlah": 8,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00094",
+      "barang_nama": "Kemangi",
+      "jumlah": 5,
+      "hargaSatuan": 10000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00106",
+      "barang_nama": "Kiwi",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 7,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00074",
+      "barang_nama": "Kacang Hijau",
+      "jumlah": 8,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00135",
+      "barang_nama": "okra",
+      "jumlah": 4,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00029",
+      "barang_nama": "Cabai Rawit Merah",
+      "jumlah": 6,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00180",
+      "barang_nama": "Taoge Pendek (Bersih)",
+      "jumlah": 3,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00054",
+      "barang_nama": "Gula Merah",
+      "jumlah": 3,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK010126001",
+      "barang_id": "BRG00189",
+      "barang_nama": "tepung ketan",
+      "jumlah": 3,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00103",
+      "barang_nama": "kerupuk udang besar",
+      "jumlah": 7,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00100",
+      "barang_nama": "kentang bulat 18",
+      "jumlah": 3,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00019",
+      "barang_nama": "Brokoli",
+      "jumlah": 5,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00195",
+      "barang_nama": "Timun Jepang / Hijau",
+      "jumlah": 7,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00090",
+      "barang_nama": "kedondong",
+      "jumlah": 4,
+      "hargaSatuan": 13000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 8,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00036",
+      "barang_nama": "Daun Kenci",
+      "jumlah": 8,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00119",
+      "barang_nama": "kurma",
+      "jumlah": 6,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00188",
+      "barang_nama": "Tepung Kanji",
+      "jumlah": 7,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00151",
+      "barang_nama": "pisang klutuk",
+      "jumlah": 6,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00124",
+      "barang_nama": "laos",
+      "jumlah": 5,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00093",
+      "barang_nama": "Kelapa Parut",
+      "jumlah": 3,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00132",
+      "barang_nama": "Merica Butir",
+      "jumlah": 7,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00182",
+      "barang_nama": "Tape Singkong",
+      "jumlah": 5,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00102",
+      "barang_nama": "kerupuk terung mentah",
+      "jumlah": 3,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00136",
+      "barang_nama": "Onclang Besar",
+      "jumlah": 7,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00025",
+      "barang_nama": "Cabai kering",
+      "jumlah": 3,
+      "hargaSatuan": 120000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00175",
+      "barang_nama": "tahu pong",
+      "jumlah": 8,
+      "hargaSatuan": 500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK030126001",
+      "barang_id": "BRG00123",
+      "barang_nama": "Lada hitam",
+      "jumlah": 3,
+      "hargaSatuan": 140000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00118",
+      "barang_nama": "Kunyit",
+      "jumlah": 8,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00101",
+      "barang_nama": "kerupuk karak",
+      "jumlah": 4,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00182",
+      "barang_nama": "Tape Singkong",
+      "jumlah": 6,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 7,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00086",
+      "barang_nama": "kayu manis",
+      "jumlah": 4,
+      "hargaSatuan": 50000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00207",
+      "barang_nama": "Ayam Pejantan",
+      "jumlah": 4,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00203",
+      "barang_nama": "Ubi Putih",
+      "jumlah": 4,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "jumlah": 8,
+      "hargaSatuan": 21000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00113",
+      "barang_nama": "Krupuk bwg warna",
+      "jumlah": 7,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00037",
+      "barang_nama": "daun ketumbar",
+      "jumlah": 8,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00141",
+      "barang_nama": "Paprika Merah",
+      "jumlah": 7,
+      "hargaSatuan": 48000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00120",
+      "barang_nama": "labu kuning",
+      "jumlah": 8,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00035",
+      "barang_nama": "Daun Jeruk",
+      "jumlah": 7,
+      "hargaSatuan": 40000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "jumlah": 4,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00045",
+      "barang_nama": "Daun Salam",
+      "jumlah": 3,
+      "hargaSatuan": 5000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00132",
+      "barang_nama": "Merica Butir",
+      "jumlah": 5,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00049",
+      "barang_nama": "Emping",
+      "jumlah": 5,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00129",
+      "barang_nama": "mangga arumanis",
+      "jumlah": 4,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK050126001",
+      "barang_id": "BRG00194",
+      "barang_nama": "Terong Ungu",
+      "jumlah": 7,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00141",
+      "barang_nama": "Paprika Merah",
+      "jumlah": 4,
+      "hargaSatuan": 48000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "jumlah": 6,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "jumlah": 7,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 6,
+      "hargaSatuan": 3500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00072",
+      "barang_nama": "jinten",
+      "jumlah": 5,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 5,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00130",
+      "barang_nama": "mangga muda",
+      "jumlah": 7,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00035",
+      "barang_nama": "Daun Jeruk",
+      "jumlah": 3,
+      "hargaSatuan": 40000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00050",
+      "barang_nama": "fillet paha ayam",
+      "jumlah": 4,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00207",
+      "barang_nama": "Ayam Pejantan",
+      "jumlah": 6,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00080",
+      "barang_nama": "kacang tanah klt ari",
+      "jumlah": 6,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00175",
+      "barang_nama": "tahu pong",
+      "jumlah": 5,
+      "hargaSatuan": 500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00042",
+      "barang_nama": "Daun Pandan",
+      "jumlah": 8,
+      "hargaSatuan": 4000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00067",
+      "barang_nama": "Jeruk Lemon",
+      "jumlah": 8,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 5,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK070126001",
+      "barang_id": "BRG00198",
+      "barang_nama": "Tomat Merah",
+      "jumlah": 3,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00060",
+      "barang_nama": "jamur hyoko",
+      "jumlah": 8,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00146",
+      "barang_nama": "Petersely",
+      "jumlah": 5,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 7,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00018",
+      "barang_nama": "blewah",
+      "jumlah": 7,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00090",
+      "barang_nama": "kedondong",
+      "jumlah": 3,
+      "hargaSatuan": 13000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "jumlah": 5,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00172",
+      "barang_nama": "singkong kupas",
+      "jumlah": 7,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00077",
+      "barang_nama": "Kacang Merah",
+      "jumlah": 5,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 7,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00180",
+      "barang_nama": "Taoge Pendek (Bersih)",
+      "jumlah": 4,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00065",
+      "barang_nama": "jamur shitake",
+      "jumlah": 5,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00092",
+      "barang_nama": "Kelapa Muda (Degan)",
+      "jumlah": 5,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00162",
+      "barang_nama": "Sawi Putih",
+      "jumlah": 4,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00058",
+      "barang_nama": "jahe emprit",
+      "jumlah": 3,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 8,
+      "hargaSatuan": 145000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00125",
+      "barang_nama": "Letuce",
+      "jumlah": 6,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00179",
+      "barang_nama": "Taoge Panjang (Bersih)",
+      "jumlah": 6,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00186",
+      "barang_nama": "Tempe Daun",
+      "jumlah": 8,
+      "hargaSatuan": 2500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00138",
+      "barang_nama": "Pala Kupas",
+      "jumlah": 7,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK090126001",
+      "barang_id": "BRG00041",
+      "barang_nama": "daun pagoda",
+      "jumlah": 6,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00081",
+      "barang_nama": "Kacang Tanah Kupas",
+      "jumlah": 3,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00020",
+      "barang_nama": "buah beet",
+      "jumlah": 3,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00060",
+      "barang_nama": "jamur hyoko",
+      "jumlah": 7,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00094",
+      "barang_nama": "Kemangi",
+      "jumlah": 5,
+      "hargaSatuan": 10000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00206",
+      "barang_nama": "Fillet dada ayam",
+      "jumlah": 6,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00043",
+      "barang_nama": "Daun pepaya rebus",
+      "jumlah": 8,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00126",
+      "barang_nama": "Lobak Putih",
+      "jumlah": 3,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00031",
+      "barang_nama": "Cakue Besar",
+      "jumlah": 4,
+      "hargaSatuan": 3500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00159",
+      "barang_nama": "Salak Pondok",
+      "jumlah": 6,
+      "hargaSatuan": 10000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00199",
+      "barang_nama": "tong jae",
+      "jumlah": 3,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 7,
+      "hargaSatuan": 145000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00179",
+      "barang_nama": "Taoge Panjang (Bersih)",
+      "jumlah": 6,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00018",
+      "barang_nama": "blewah",
+      "jumlah": 3,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00050",
+      "barang_nama": "fillet paha ayam",
+      "jumlah": 4,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00152",
+      "barang_nama": "Pisang Mas",
+      "jumlah": 3,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00134",
+      "barang_nama": "Nangka Matang",
+      "jumlah": 4,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 4,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 7,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00136",
+      "barang_nama": "Onclang Besar",
+      "jumlah": 8,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK110126001",
+      "barang_id": "BRG00027",
+      "barang_nama": "Cabai Merah Besar",
+      "jumlah": 5,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00119",
+      "barang_nama": "kurma",
+      "jumlah": 7,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00144",
+      "barang_nama": "Pepaya Merah",
+      "jumlah": 6,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "jumlah": 5,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00062",
+      "barang_nama": "Jamur Kuping",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00100",
+      "barang_nama": "kentang bulat 18",
+      "jumlah": 7,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00083",
+      "barang_nama": "Kangkung akar",
+      "jumlah": 6,
+      "hargaSatuan": 5000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00114",
+      "barang_nama": "kulit lumpia besar",
+      "jumlah": 7,
+      "hargaSatuan": 600
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 3,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00126",
+      "barang_nama": "Lobak Putih",
+      "jumlah": 7,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 5,
+      "hargaSatuan": 145000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00016",
+      "barang_nama": "Beras ketan",
+      "jumlah": 5,
+      "hargaSatuan": 23000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00034",
+      "barang_nama": "daun  ginseng",
+      "jumlah": 7,
+      "hargaSatuan": 7000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00030",
+      "barang_nama": "Caisim (Sawi Hijau)",
+      "jumlah": 7,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00205",
+      "barang_nama": "Wortel Lokal",
+      "jumlah": 3,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK130126001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "jumlah": 5,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00082",
+      "barang_nama": "Kacang Tolo",
+      "jumlah": 4,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00022",
+      "barang_nama": "Buncis",
+      "jumlah": 5,
+      "hargaSatuan": 23000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00154",
+      "barang_nama": "Pisang Susu",
+      "jumlah": 5,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00055",
+      "barang_nama": "ikan asin layur",
+      "jumlah": 6,
+      "hargaSatuan": 75000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00024",
+      "barang_nama": "Cabai Hijau Besar",
+      "jumlah": 7,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00063",
+      "barang_nama": "Jamur Merang",
+      "jumlah": 6,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00168",
+      "barang_nama": "Seledri",
+      "jumlah": 6,
+      "hargaSatuan": 40000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 7,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00205",
+      "barang_nama": "Wortel Lokal",
+      "jumlah": 6,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00156",
+      "barang_nama": "Rebung Rajang",
+      "jumlah": 4,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00064",
+      "barang_nama": "Jamur Salju",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "jumlah": 7,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 7,
+      "hargaSatuan": 180000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00178",
+      "barang_nama": "Taoge Kedelai",
+      "jumlah": 4,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00056",
+      "barang_nama": "Jagung Manis",
+      "jumlah": 5,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00062",
+      "barang_nama": "Jamur Kuping",
+      "jumlah": 7,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00111",
+      "barang_nama": "kolokeling",
+      "jumlah": 3,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00116",
+      "barang_nama": "kulit pangsit",
+      "jumlah": 5,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00083",
+      "barang_nama": "Kangkung akar",
+      "jumlah": 4,
+      "hargaSatuan": 5000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK150126001",
+      "barang_id": "BRG00001",
+      "barang_nama": "Abon",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00098",
+      "barang_nama": "kenikir",
+      "jumlah": 3,
+      "hargaSatuan": 7000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 8,
+      "hargaSatuan": 3500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00030",
+      "barang_nama": "Caisim (Sawi Hijau)",
+      "jumlah": 6,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00045",
+      "barang_nama": "Daun Salam",
+      "jumlah": 5,
+      "hargaSatuan": 5000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00094",
+      "barang_nama": "Kemangi",
+      "jumlah": 8,
+      "hargaSatuan": 10000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00154",
+      "barang_nama": "Pisang Susu",
+      "jumlah": 6,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 4,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00073",
+      "barang_nama": "Jipang Rajang",
+      "jumlah": 4,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00171",
+      "barang_nama": "singkong",
+      "jumlah": 8,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00027",
+      "barang_nama": "Cabai Merah Besar",
+      "jumlah": 7,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00079",
+      "barang_nama": "Kacang Panjang",
+      "jumlah": 6,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 6,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00134",
+      "barang_nama": "Nangka Matang",
+      "jumlah": 5,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00143",
+      "barang_nama": "paya",
+      "jumlah": 8,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00172",
+      "barang_nama": "singkong kupas",
+      "jumlah": 7,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 4,
+      "hargaSatuan": 180000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "jumlah": 6,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK170126001",
+      "barang_id": "BRG00089",
+      "barang_nama": "Kedelai Puitih",
+      "jumlah": 3,
+      "hargaSatuan": 17000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 3,
+      "hargaSatuan": 145000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00030",
+      "barang_nama": "Caisim (Sawi Hijau)",
+      "jumlah": 6,
+      "hargaSatuan": 8000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00184",
+      "barang_nama": "Telur Puyuh Kupas",
+      "jumlah": 4,
+      "hargaSatuan": 700
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "jumlah": 4,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00123",
+      "barang_nama": "Lada hitam",
+      "jumlah": 6,
+      "hargaSatuan": 140000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00023",
+      "barang_nama": "Buncis Baby",
+      "jumlah": 7,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00093",
+      "barang_nama": "Kelapa Parut",
+      "jumlah": 7,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00112",
+      "barang_nama": "Krecek",
+      "jumlah": 4,
+      "hargaSatuan": 120000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00166",
+      "barang_nama": "Selada Keriting",
+      "jumlah": 7,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00207",
+      "barang_nama": "Ayam Pejantan",
+      "jumlah": 3,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00144",
+      "barang_nama": "Pepaya Merah",
+      "jumlah": 5,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00172",
+      "barang_nama": "singkong kupas",
+      "jumlah": 8,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00029",
+      "barang_nama": "Cabai Rawit Merah",
+      "jumlah": 8,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00197",
+      "barang_nama": "Tomat Hijau",
+      "jumlah": 7,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK190126001",
+      "barang_id": "BRG00087",
+      "barang_nama": "kecipir",
+      "jumlah": 5,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00015",
+      "barang_nama": "Bengkoang",
+      "jumlah": 7,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00052",
+      "barang_nama": "Gembus",
+      "jumlah": 3,
+      "hargaSatuan": 2500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00058",
+      "barang_nama": "jahe emprit",
+      "jumlah": 7,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00085",
+      "barang_nama": "Kapulaga",
+      "jumlah": 3,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00007",
+      "barang_nama": "Bakso ikan BJ",
+      "jumlah": 11,
+      "hargaSatuan": 1500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00067",
+      "barang_nama": "Jeruk Lemon",
+      "jumlah": 3,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 5,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00156",
+      "barang_nama": "Rebung Rajang",
+      "jumlah": 4,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00003",
+      "barang_nama": "Apel Malang",
+      "jumlah": 5,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00038",
+      "barang_nama": "daun koiling",
+      "jumlah": 5,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00108",
+      "barang_nama": "Kol Merah",
+      "jumlah": 7,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00140",
+      "barang_nama": "Paprika kuning",
+      "jumlah": 7,
+      "hargaSatuan": 52000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00175",
+      "barang_nama": "tahu pong",
+      "jumlah": 8,
+      "hargaSatuan": 500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 4,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00158",
+      "barang_nama": "rumput laut",
+      "jumlah": 6,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00014",
+      "barang_nama": "Belimbing Wuluh",
+      "jumlah": 3,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK210126001",
+      "barang_id": "BRG00110",
+      "barang_nama": "Kolang Kaling Besar",
+      "jumlah": 3,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00028",
+      "barang_nama": "Cabai Rawit",
+      "jumlah": 3,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00087",
+      "barang_nama": "kecipir",
+      "jumlah": 5,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00181",
+      "barang_nama": "Tape Ketan",
+      "jumlah": 7,
+      "hargaSatuan": 5000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00100",
+      "barang_nama": "kentang bulat 18",
+      "jumlah": 4,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00010",
+      "barang_nama": "Bawang Merah Kupas",
+      "jumlah": 8,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00055",
+      "barang_nama": "ikan asin layur",
+      "jumlah": 4,
+      "hargaSatuan": 75000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00113",
+      "barang_nama": "Krupuk bwg warna",
+      "jumlah": 8,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00161",
+      "barang_nama": "sawi asin",
+      "jumlah": 8,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00106",
+      "barang_nama": "Kiwi",
+      "jumlah": 7,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 6,
+      "hargaSatuan": 180000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00105",
+      "barang_nama": "Ketumbar",
+      "jumlah": 8,
+      "hargaSatuan": 40000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00018",
+      "barang_nama": "blewah",
+      "jumlah": 6,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00153",
+      "barang_nama": "Pisang Raja",
+      "jumlah": 5,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00096",
+      "barang_nama": "Kemiri",
+      "jumlah": 4,
+      "hargaSatuan": 6000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00176",
+      "barang_nama": "Tahu Putih",
+      "jumlah": 4,
+      "hargaSatuan": 900
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00076",
+      "barang_nama": "Kacang Kulit/kc.godog",
+      "jumlah": 6,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK230126001",
+      "barang_id": "BRG00095",
+      "barang_nama": "Kembang Kol",
+      "jumlah": 4,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00196",
+      "barang_nama": "Tofu",
+      "jumlah": 3,
+      "hargaSatuan": 7500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00056",
+      "barang_nama": "Jagung Manis",
+      "jumlah": 5,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00132",
+      "barang_nama": "Merica Butir",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00038",
+      "barang_nama": "daun koiling",
+      "jumlah": 8,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00117",
+      "barang_nama": "kunci",
+      "jumlah": 3,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00091",
+      "barang_nama": "Kelapa kupas utuh",
+      "jumlah": 8,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00076",
+      "barang_nama": "Kacang Kulit/kc.godog",
+      "jumlah": 6,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "jumlah": 3,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00054",
+      "barang_nama": "Gula Merah",
+      "jumlah": 5,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00053",
+      "barang_nama": "Gori",
+      "jumlah": 6,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00206",
+      "barang_nama": "Fillet dada ayam",
+      "jumlah": 6,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00031",
+      "barang_nama": "Cakue Besar",
+      "jumlah": 4,
+      "hargaSatuan": 3500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00052",
+      "barang_nama": "Gembus",
+      "jumlah": 3,
+      "hargaSatuan": 2500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00195",
+      "barang_nama": "Timun Jepang / Hijau",
+      "jumlah": 5,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK250126001",
+      "barang_id": "BRG00192",
+      "barang_nama": "Teri Medan",
+      "jumlah": 4,
+      "hargaSatuan": 145000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00069",
+      "barang_nama": "Jeruk Nipis",
+      "jumlah": 5,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00096",
+      "barang_nama": "Kemiri",
+      "jumlah": 6,
+      "hargaSatuan": 6000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00121",
+      "barang_nama": "labu putih",
+      "jumlah": 7,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "jumlah": 6,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00116",
+      "barang_nama": "kulit pangsit",
+      "jumlah": 6,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00200",
+      "barang_nama": "tusuk sate",
+      "jumlah": 6,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00177",
+      "barang_nama": "Tahu Serasi",
+      "jumlah": 7,
+      "hargaSatuan": 21000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00065",
+      "barang_nama": "jamur shitake",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00088",
+      "barang_nama": "kecombrang",
+      "jumlah": 6,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00006",
+      "barang_nama": "Baby Kailan",
+      "jumlah": 7,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00137",
+      "barang_nama": "oncom",
+      "jumlah": 6,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00049",
+      "barang_nama": "Emping",
+      "jumlah": 7,
+      "hargaSatuan": 55000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00048",
+      "barang_nama": "ebi",
+      "jumlah": 5,
+      "hargaSatuan": 180000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00002",
+      "barang_nama": "Alpokat",
+      "jumlah": 6,
+      "hargaSatuan": 34000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00023",
+      "barang_nama": "Buncis Baby",
+      "jumlah": 6,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00081",
+      "barang_nama": "Kacang Tanah Kupas",
+      "jumlah": 5,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00063",
+      "barang_nama": "Jamur Merang",
+      "jumlah": 7,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK270126001",
+      "barang_id": "BRG00162",
+      "barang_nama": "Sawi Putih",
+      "jumlah": 3,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00160",
+      "barang_nama": "Sambal Kacang",
+      "jumlah": 7,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "jumlah": 6,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00158",
+      "barang_nama": "rumput laut",
+      "jumlah": 4,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00117",
+      "barang_nama": "kunci",
+      "jumlah": 5,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00054",
+      "barang_nama": "Gula Merah",
+      "jumlah": 5,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00134",
+      "barang_nama": "Nangka Matang",
+      "jumlah": 8,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00088",
+      "barang_nama": "kecombrang",
+      "jumlah": 4,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00029",
+      "barang_nama": "Cabai Rawit Merah",
+      "jumlah": 4,
+      "hargaSatuan": 90000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00149",
+      "barang_nama": "Pisang kapas",
+      "jumlah": 7,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00102",
+      "barang_nama": "kerupuk terung mentah",
+      "jumlah": 5,
+      "hargaSatuan": 20000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00118",
+      "barang_nama": "Kunyit",
+      "jumlah": 4,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00013",
+      "barang_nama": "Belimbing",
+      "jumlah": 4,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00109",
+      "barang_nama": "Kol Putih",
+      "jumlah": 7,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00023",
+      "barang_nama": "Buncis Baby",
+      "jumlah": 8,
+      "hargaSatuan": 30000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00176",
+      "barang_nama": "Tahu Putih",
+      "jumlah": 8,
+      "hargaSatuan": 900
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00022",
+      "barang_nama": "Buncis",
+      "jumlah": 7,
+      "hargaSatuan": 23000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00108",
+      "barang_nama": "Kol Merah",
+      "jumlah": 8,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00032",
+      "barang_nama": "Ciciwis",
+      "jumlah": 5,
+      "hargaSatuan": 18000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK290126001",
+      "barang_id": "BRG00194",
+      "barang_nama": "Terong Ungu",
+      "jumlah": 7,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00150",
+      "barang_nama": "Pisang Kepok Kuning",
+      "jumlah": 7,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00063",
+      "barang_nama": "Jamur Merang",
+      "jumlah": 6,
+      "hargaSatuan": 45000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00163",
+      "barang_nama": "Sawi Sendok",
+      "jumlah": 8,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00047",
+      "barang_nama": "Dawet",
+      "jumlah": 4,
+      "hargaSatuan": 15000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00081",
+      "barang_nama": "Kacang Tanah Kupas",
+      "jumlah": 5,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00103",
+      "barang_nama": "kerupuk udang besar",
+      "jumlah": 3,
+      "hargaSatuan": 70000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00070",
+      "barang_nama": "Jeruk Pontianak peres",
+      "jumlah": 3,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00147",
+      "barang_nama": "Petis eva",
+      "jumlah": 7,
+      "hargaSatuan": 24000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00095",
+      "barang_nama": "Kembang Kol",
+      "jumlah": 8,
+      "hargaSatuan": 25000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00059",
+      "barang_nama": "Jambu Biji",
+      "jumlah": 7,
+      "hargaSatuan": 16000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00197",
+      "barang_nama": "Tomat Hijau",
+      "jumlah": 8,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00092",
+      "barang_nama": "Kelapa Muda (Degan)",
+      "jumlah": 4,
+      "hargaSatuan": 14000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00071",
+      "barang_nama": "Jeruk siam/BOX",
+      "jumlah": 3,
+      "hargaSatuan": 28000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00115",
+      "barang_nama": "kulit lumpia kecil",
+      "jumlah": 3,
+      "hargaSatuan": 500
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00201",
+      "barang_nama": "Ubi kuning",
+      "jumlah": 4,
+      "hargaSatuan": 12000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00108",
+      "barang_nama": "Kol Merah",
+      "jumlah": 3,
+      "hargaSatuan": 35000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00009",
+      "barang_nama": "Bawang Merah Goreng",
+      "jumlah": 4,
+      "hargaSatuan": 80000
+    },
+    {
+      "transaksiBarangKeluar_id": "TRK310126001",
+      "barang_id": "BRG00183",
+      "barang_nama": "Telur Asin",
+      "jumlah": 3,
+      "hargaSatuan": 3500
+    }
+  ]
+}

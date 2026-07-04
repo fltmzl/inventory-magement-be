@@ -1,0 +1,316 @@
+{
+  "meta": {
+    "period_start": "2026-01-01",
+    "period_end": "2026-01-31",
+    "notes": "Dummy dataset Januari 2026 — gunakan ini untuk review sebelum import. Barang direferensikan by nama (barang_nama). IDs berformat PB/TRM/TRK/LOT + DDMMYY + 3-digit sequence per day starting at 001. Spoilage estimated in lot notes."
+  },
+  "pelanggan": [
+    {
+      "id": "P73528",
+      "nama": "Restoran Truntum",
+      "telepon": "081808786886",
+      "email": "truntum@truntumgama.com",
+      "alamat": "Jl. Sisingamangaraja No.21, Candi, Kec. Candisari",
+      "createdAt": "2024-12-26T07:35:27.700Z",
+      "updatedAt": "2024-12-26T07:35:27.700Z"
+    },
+    {
+      "id": "P001",
+      "nama": "Restoran GAMA Seafood",
+      "telepon": "085693185670",
+      "email": "info@gamaseafood.com",
+      "alamat": "Jl. M.T. Haryono no. 870A Semarang",
+      "createdAt": "2024-09-07T10:50:25.627Z",
+      "updatedAt": "2024-12-26T07:37:51.681Z"
+    }
+  ],
+  "nomor_lot": [
+    { "id": "lot-20260101-001", "kode": "LOT010126001", "createdAt": "2026-01-01T08:00:00Z", "notes": "expected spoilage ~2-4% for perishables" },
+    { "id": "lot-20260107-001", "kode": "LOT070126001", "createdAt": "2026-01-07T08:00:00Z", "notes": "expected spoilage ~2-4%" },
+    { "id": "lot-20260113-001", "kode": "LOT130126001", "createdAt": "2026-01-13T08:00:00Z", "notes": "expected spoilage ~2-4%" },
+    { "id": "lot-20260119-001", "kode": "LOT190126001", "createdAt": "2026-01-19T08:00:00Z", "notes": "expected spoilage ~2-4%" },
+    { "id": "lot-20260125-001", "kode": "LOT250126001", "createdAt": "2026-01-25T08:00:00Z", "notes": "expected spoilage ~2-4%" },
+    { "id": "lot-20260131-001", "kode": "LOT310126001", "createdAt": "2026-01-31T08:00:00Z", "notes": "expected spoilage ~2-4%" }
+  ],
+  "transaksi_barang_masuk": [
+    { "id": "TRM010126001", "nomorLot_id": "lot-20260101-001", "tanggal": "2026-01-01T08:00:00Z", "hargaTotal": 0 },
+    { "id": "TRM070126001", "nomorLot_id": "lot-20260107-001", "tanggal": "2026-01-07T08:00:00Z", "hargaTotal": 0 },
+    { "id": "TRM130126001", "nomorLot_id": "lot-20260113-001", "tanggal": "2026-01-13T08:00:00Z", "hargaTotal": 0 },
+    { "id": "TRM190126001", "nomorLot_id": "lot-20260119-001", "tanggal": "2026-01-19T08:00:00Z", "hargaTotal": 0 },
+    { "id": "TRM250126001", "nomorLot_id": "lot-20260125-001", "tanggal": "2026-01-25T08:00:00Z", "hargaTotal": 0 },
+    { "id": "TRM310126001", "nomorLot_id": "lot-20260131-001", "tanggal": "2026-01-31T08:00:00Z", "hargaTotal": 0 }
+  ],
+  "detail_transaksi_barang_masuk": [
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Abon", "jumlah": 10, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Alpokat", "jumlah": 50, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Apel Malang", "jumlah": 40, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Asam Jawa", "jumlah": 15, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "ayam boiler", "jumlah": 60, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Baby Kailan", "jumlah": 40, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Bakso ikan BJ", "jumlah": 200, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Bawang Bombay", "jumlah": 40, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 10, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 35, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Bayam", "jumlah": 60, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Belimbing", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Bengkoang", "jumlah": 25, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Beras ketan", "jumlah": 20, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Jagung Manis", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Kentang Besar", "jumlah": 40, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Wortel Lokal", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Tomat Merah", "jumlah": 35, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM010126001", "barang_nama": "Pisang Ambon", "jumlah": 60, "hargaSatuan": 10000 },
+
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Abon", "jumlah": 8, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Alpokat", "jumlah": 40, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Apel Malang", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Asam Jawa", "jumlah": 10, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "ayam boiler", "jumlah": 50, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Baby Kailan", "jumlah": 35, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Bakso ikan BJ", "jumlah": 180, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Bawang Bombay", "jumlah": 35, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 8, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 25, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Bayam", "jumlah": 50, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Belimbing", "jumlah": 25, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Bengkoang", "jumlah": 20, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Beras ketan", "jumlah": 15, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Jagung Manis", "jumlah": 25, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Kentang Besar", "jumlah": 35, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Wortel Lokal", "jumlah": 25, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Tomat Merah", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM070126001", "barang_nama": "Pisang Ambon", "jumlah": 50, "hargaSatuan": 10000 },
+
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Abon", "jumlah": 12, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Alpokat", "jumlah": 45, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Apel Malang", "jumlah": 35, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Asam Jawa", "jumlah": 12, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "ayam boiler", "jumlah": 55, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Baby Kailan", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Bakso ikan BJ", "jumlah": 170, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Bawang Bombay", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 9, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 28, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 28, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Bayam", "jumlah": 55, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Belimbing", "jumlah": 28, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Bengkoang", "jumlah": 22, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Beras ketan", "jumlah": 18, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Jagung Manis", "jumlah": 28, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Kentang Besar", "jumlah": 38, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Wortel Lokal", "jumlah": 28, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Tomat Merah", "jumlah": 32, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM130126001", "barang_nama": "Pisang Ambon", "jumlah": 55, "hargaSatuan": 10000 },
+
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Abon", "jumlah": 9, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Alpokat", "jumlah": 48, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Apel Malang", "jumlah": 38, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Asam Jawa", "jumlah": 11, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "ayam boiler", "jumlah": 45, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Baby Kailan", "jumlah": 32, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Bakso ikan BJ", "jumlah": 160, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Bawang Bombay", "jumlah": 38, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 11, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 32, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 26, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Bayam", "jumlah": 48, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Belimbing", "jumlah": 26, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Bengkoang", "jumlah": 24, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Beras ketan", "jumlah": 17, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Jagung Manis", "jumlah": 26, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Kentang Besar", "jumlah": 36, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Wortel Lokal", "jumlah": 29, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Tomat Merah", "jumlah": 34, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM190126001", "barang_nama": "Pisang Ambon", "jumlah": 58, "hargaSatuan": 10000 },
+
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Abon", "jumlah": 11, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Alpokat", "jumlah": 46, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Apel Malang", "jumlah": 36, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Asam Jawa", "jumlah": 13, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "ayam boiler", "jumlah": 52, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Baby Kailan", "jumlah": 34, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Bakso ikan BJ", "jumlah": 175, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Bawang Bombay", "jumlah": 36, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 10, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 31, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 27, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Bayam", "jumlah": 52, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Belimbing", "jumlah": 27, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Bengkoang", "jumlah": 23, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Beras ketan", "jumlah": 19, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Jagung Manis", "jumlah": 27, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Kentang Besar", "jumlah": 37, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Wortel Lokal", "jumlah": 31, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Tomat Merah", "jumlah": 33, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM250126001", "barang_nama": "Pisang Ambon", "jumlah": 57, "hargaSatuan": 10000 },
+
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Abon", "jumlah": 7, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Alpokat", "jumlah": 42, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Apel Malang", "jumlah": 34, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Asam Jawa", "jumlah": 9, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "ayam boiler", "jumlah": 48, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Baby Kailan", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Bakso ikan BJ", "jumlah": 160, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Bawang Bombay", "jumlah": 34, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 7, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 29, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 24, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Bayam", "jumlah": 46, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Belimbing", "jumlah": 25, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Bengkoang", "jumlah": 21, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Beras ketan", "jumlah": 16, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Jagung Manis", "jumlah": 24, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Kentang Besar", "jumlah": 35, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Wortel Lokal", "jumlah": 27, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Tomat Merah", "jumlah": 31, "hargaSatuan": 10000 },
+    { "transaksiBarangMasuk_id": "TRM310126001", "barang_nama": "Pisang Ambon", "jumlah": 54, "hargaSatuan": 10000 }
+  ],
+  "detail_nomor_lot_barang": [
+    { "nomorLot_id": "lot-20260101-001", "barang_nama": "Bayam", "totalBarang": 60 },
+    { "nomorLot_id": "lot-20260101-001", "barang_nama": "Baby Kailan", "totalBarang": 40 },
+    { "nomorLot_id": "lot-20260101-001", "barang_nama": "Bakso ikan BJ", "totalBarang": 200 },
+    { "nomorLot_id": "lot-20260101-001", "barang_nama": "ayam boiler", "totalBarang": 60 },
+    { "nomorLot_id": "lot-20260101-001", "barang_nama": "Bawang Putih Kupas", "totalBarang": 30 },
+    { "nomorLot_id": "lot-20260101-001", "barang_nama": "Bawang Merah Kupas", "totalBarang": 35 }
+  ],
+  "permintaan_barang": [
+    { "id": "PB010126001", "pelanggan_id": "P73528", "tanggal": "2026-01-01T10:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB030126001", "pelanggan_id": "P001", "tanggal": "2026-01-03T09:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB050126001", "pelanggan_id": "P73528", "tanggal": "2026-01-05T13:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB070126001", "pelanggan_id": "P001", "tanggal": "2026-01-07T09:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB090126001", "pelanggan_id": "P73528", "tanggal": "2026-01-09T10:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB110126001", "pelanggan_id": "P001", "tanggal": "2026-01-11T09:30:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB130126001", "pelanggan_id": "P73528", "tanggal": "2026-01-13T08:30:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB150126001", "pelanggan_id": "P001", "tanggal": "2026-01-15T13:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB170126001", "pelanggan_id": "P73528", "tanggal": "2026-01-17T09:15:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB190126001", "pelanggan_id": "P001", "tanggal": "2026-01-19T10:45:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB210126001", "pelanggan_id": "P73528", "tanggal": "2026-01-21T09:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB230126001", "pelanggan_id": "P001", "tanggal": "2026-01-23T13:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB250126001", "pelanggan_id": "P73528", "tanggal": "2026-01-25T09:30:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB270126001", "pelanggan_id": "P001", "tanggal": "2026-01-27T10:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB290126001", "pelanggan_id": "P73528", "tanggal": "2026-01-29T08:45:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" },
+    { "id": "PB310126001", "pelanggan_id": "P001", "tanggal": "2026-01-31T09:00:00Z", "permintaanTerpenuhi": true, "pegawai_id": "09f5b80f-45a5-4cb7-a969-73a03c482ef8" }
+  ],
+  "detail_permintaan_barang": [
+    { "permintaanBarang_id": "PB010126001", "barang_nama": "Bayam", "jumlah": 6 },
+    { "permintaanBarang_id": "PB010126001", "barang_nama": "Bakso ikan BJ", "jumlah": 30 },
+    { "permintaanBarang_id": "PB010126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 2 },
+
+    { "permintaanBarang_id": "PB030126001", "barang_nama": "Baby Kailan", "jumlah": 4 },
+    { "permintaanBarang_id": "PB030126001", "barang_nama": "ayam boiler", "jumlah": 3 },
+    { "permintaanBarang_id": "PB030126001", "barang_nama": "Bawang Bombay", "jumlah": 2 },
+
+    { "permintaanBarang_id": "PB050126001", "barang_nama": "Apel Malang", "jumlah": 5 },
+    { "permintaanBarang_id": "PB050126001", "barang_nama": "Alpokat", "jumlah": 6 },
+
+    { "permintaanBarang_id": "PB070126001", "barang_nama": "Bayam", "jumlah": 8 },
+    { "detail_permintaan_barang": "PB070126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 3 },
+
+    { "permintaanBarang_id": "PB090126001", "barang_nama": "Bakso ikan BJ", "jumlah": 50 },
+    { "permintaanBarang_id": "PB090126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 1 },
+
+    { "permintaanBarang_id": "PB110126001", "barang_nama": "Baby Kailan", "jumlah": 5 },
+    { "permintaanBarang_id": "PB110126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 4 },
+
+    { "permintaanBarang_id": "PB130126001", "barang_nama": "Bayam", "jumlah": 7 },
+    { "permintaanBarang_id": "PB130126001", "barang_nama": "Ayam Boiler", "jumlah": 6 },
+
+    { "permintaanBarang_id": "PB150126001", "barang_nama": "Pisang Ambon", "jumlah": 15 },
+    { "permintaanBarang_id": "PB150126001", "barang_nama": "Tomat Merah", "jumlah": 10 },
+
+    { "permintaanBarang_id": "PB170126001", "barang_nama": "Apel Malang", "jumlah": 8 },
+    { "permintaanBarang_id": "PB170126001", "barang_nama": "Alpokat", "jumlah": 5 },
+
+    { "permintaanBarang_id": "PB190126001", "barang_nama": "Bakso ikan BJ", "jumlah": 60 },
+    { "permintaanBarang_id": "PB190126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 5 },
+
+    { "permintaanBarang_id": "PB210126001", "barang_nama": "Bayam", "jumlah": 6 },
+    { "permintaanBarang_id": "PB210126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 4 },
+
+    { "permintaanBarang_id": "PB230126001", "barang_nama": "ayam boiler", "jumlah": 8 },
+    { "permintaanBarang_id": "PB230126001", "barang_nama": "Bakso ikan BJ", "jumlah": 40 },
+
+    { "permintaanBarang_id": "PB250126001", "barang_nama": "Apel Malang", "jumlah": 7 },
+    { "permintaanBarang_id": "PB250126001", "barang_nama": "Alpokat", "jumlah": 6 },
+
+    { "permintaanBarang_id": "PB270126001", "barang_nama": "Bayam", "jumlah": 9 },
+    { "permintaanBarang_id": "PB270126001", "barang_nama": "Wortel Lokal", "jumlah": 5 },
+
+    { "permintaanBarang_id": "PB290126001", "barang_nama": "Bakso ikan BJ", "jumlah": 70 },
+    { "permintaanBarang_id": "PB290126001", "barang_nama": "Bawang Bombay", "jumlah": 3 },
+
+    { "permintaanBarang_id": "PB310126001", "barang_nama": "Pisang Ambon", "jumlah": 20 },
+    { "permintaanBarang_id": "PB310126001", "barang_nama": "Tomat Merah", "jumlah": 12 }
+  ],
+  "transaksi_barang_keluar": [
+    { "id": "TRK010126001", "permintaanBarang_id": "PB010126001", "tanggal": "2026-01-02T08:30:00Z", "hargaTotal": 0 },
+    { "id": "TRK030126001", "permintaanBarang_id": "PB030126001", "tanggal": "2026-01-04T12:00:00Z", "hargaTotal": 0 },
+    { "id": "TRK050126001", "permintaanBarang_id": "PB050126001", "tanggal": "2026-01-06T09:00:00Z", "hargaTotal": 0 },
+    { "id": "TRK070126001", "permintaanBarang_id": "PB070126001", "tanggal": "2026-01-08T09:00:00Z", "hargaTotal": 0 },
+    { "id": "TRK090126001", "permintaanBarang_id": "PB090126001", "tanggal": "2026-01-10T08:45:00Z", "hargaTotal": 0 },
+    { "id": "TRK110126001", "permintaanBarang_id": "PB110126001", "tanggal": "2026-01-12T09:30:00Z", "hargaTotal": 0 },
+    { "id": "TRK130126001", "permintaanBarang_id": "PB130126001", "tanggal": "2026-01-14T08:30:00Z", "hargaTotal": 0 },
+    { "id": "TRK150126001", "permintaanBarang_id": "PB150126001", "tanggal": "2026-01-16T11:00:00Z", "hargaTotal": 0 },
+    { "id": "TRK170126001", "permintaanBarang_id": "PB170126001", "tanggal": "2026-01-18T09:15:00Z", "hargaTotal": 0 },
+    { "id": "TRK190126001", "permintaanBarang_id": "PB190126001", "tanggal": "2026-01-20T10:45:00Z", "hargaTotal": 0 },
+    { "id": "TRK210126001", "permintaanBarang_id": "PB210126001", "tanggal": "2026-01-22T09:00:00Z", "hargaTotal": 0 },
+    { "id": "TRK230126001", "permintaanBarang_id": "PB230126001", "tanggal": "2026-01-24T13:00:00Z", "hargaTotal": 0 },
+    { "id": "TRK250126001", "permintaanBarang_id": "PB250126001", "tanggal": "2026-01-26T09:30:00Z", "hargaTotal": 0 },
+    { "id": "TRK270126001", "permintaanBarang_id": "PB270126001", "tanggal": "2026-01-28T10:00:00Z", "hargaTotal": 0 },
+    { "id": "TRK290126001", "permintaanBarang_id": "PB290126001", "tanggal": "2026-01-30T08:45:00Z", "hargaTotal": 0 },
+    { "id": "TRK310126001", "permintaanBarang_id": "PB310126001", "tanggal": "2026-02-01T09:00:00Z", "hargaTotal": 0 }
+  ],
+  "detail_transaksi_barang_keluar": [
+    { "transaksiBarangKeluar_id": "TRK010126001", "barang_nama": "Bayam", "jumlah": 6, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK010126001", "barang_nama": "Bakso ikan BJ", "jumlah": 30, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK010126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 2, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK030126001", "barang_nama": "Baby Kailan", "jumlah": 4, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK030126001", "barang_nama": "ayam boiler", "jumlah": 3, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK030126001", "barang_nama": "Bawang Bombay", "jumlah": 2, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK050126001", "barang_nama": "Apel Malang", "jumlah": 5, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK050126001", "barang_nama": "Alpokat", "jumlah": 6, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK070126001", "barang_nama": "Bayam", "jumlah": 8, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK070126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 3, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK090126001", "barang_nama": "Bakso ikan BJ", "jumlah": 50, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK090126001", "barang_nama": "Bawang Merah Goreng", "jumlah": 1, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK110126001", "barang_nama": "Baby Kailan", "jumlah": 5, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK110126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 4, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK130126001", "barang_nama": "Bayam", "jumlah": 7, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK130126001", "barang_nama": "Ayam Boiler", "jumlah": 6, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK150126001", "barang_nama": "Pisang Ambon", "jumlah": 15, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK150126001", "barang_nama": "Tomat Merah", "jumlah": 10, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK170126001", "barang_nama": "Apel Malang", "jumlah": 8, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK170126001", "barang_nama": "Alpokat", "jumlah": 5, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK190126001", "barang_nama": "Bakso ikan BJ", "jumlah": 60, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK190126001", "barang_nama": "Bawang Putih Kupas", "jumlah": 5, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK210126001", "barang_nama": "Bayam", "jumlah": 6, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK210126001", "barang_nama": "Bawang Merah Kupas", "jumlah": 4, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK230126001", "barang_nama": "ayam boiler", "jumlah": 8, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK230126001", "barang_nama": "Bakso ikan BJ", "jumlah": 40, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK250126001", "barang_nama": "Apel Malang", "jumlah": 7, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK250126001", "barang_nama": "Alpokat", "jumlah": 6, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK270126001", "barang_nama": "Bayam", "jumlah": 9, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK270126001", "barang_nama": "Wortel Lokal", "jumlah": 5, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK290126001", "barang_nama": "Bakso ikan BJ", "jumlah": 70, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK290126001", "barang_nama": "Bawang Bombay", "jumlah": 3, "hargaSatuan": 10000 },
+
+    { "transaksiBarangKeluar_id": "TRK310126001", "barang_nama": "Pisang Ambon", "jumlah": 20, "hargaSatuan": 10000 },
+    { "transaksiBarangKeluar_id": "TRK310126001", "barang_nama": "Tomat Merah", "jumlah": 12, "hargaSatuan": 10000 }
+  ]
+}

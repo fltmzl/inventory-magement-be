@@ -15,22 +15,34 @@ export class BarangService {
   ) {}
 
   private CRON_JOB_STOCK = 'stockCheckJob';
+  private SCHEDULER_INTERVAL_IN_HOURS = 1;
 
   // @Cron(CronExpression.EVERY_5_MINUTES)
-  // handleCron() {
-  //   console.log('CRON EMAIL JALAN');
-  //   this.mailService.sendEmail();
-  // }
-
-  async onModuleInit() {
-    // await this.setupStockCheckJob();
+  handleCron() {
+    console.log('CRON EMAIL JALAN', new Date().getHours());
+    // this.mailService.sendEmail();
   }
 
-  async setupStockCheckJob(intervalInSeconds: number = 10) {
-    const job = new CronJob(`*/${intervalInSeconds} * * * * *`, () => {
-      // const job = new CronJob(CronExpression.EVERY_5_SECONDS, () => {
-      console.log('CRON JOB CHECK STOK');
+  getCurrentTime(): string {
+    const now = new Date();
+    return `${now.getHours()}:${now.getMinutes()}:${now.getSeconds()}`;
+  }
+
+  async onModuleInit() {
+    await this.setupStockCheckJob();
+  }
+
+  async setupStockCheckJob(
+    intervalInHours: number = this.SCHEDULER_INTERVAL_IN_HOURS,
+  ) {
+    // const job = new CronJob(`0 0-23/${intervalInHours} * * *`, () => {
+    const job = new CronJob(CronExpression.EVERY_5_SECONDS, async () => {
+      console.log('CRON JOB CHECK STOK', this.getCurrentTime());
+      const lowStock = await this.getLowStock(5);
+      console.log({ lowStock: lowStock.data });
+      this.handleCron();
     });
+
     this.schedulerRegistry.addCronJob(this.CRON_JOB_STOCK, job);
     job.start();
     console.log('JOB START');
@@ -84,10 +96,21 @@ export class BarangService {
           },
         },
       },
+      orderBy: {
+        nama: 'asc',
+      },
+    });
+
+    const mappedBarang = barang.map((item) => {
+      return {
+        ...item,
+        nomorLot: item.nomorLot.map((lot) => lot.nomorLot.kode),
+        harga: Number(item.harga),
+      };
     });
 
     return {
-      data: barang,
+      data: mappedBarang,
       meta: {
         totalItems: barang.length,
       },
@@ -152,6 +175,87 @@ export class BarangService {
         id: barang.id,
       },
       message: 'Barang berhasil dihapus',
+    };
+  }
+
+  async count(): Promise<number> {
+    const total = await this.prisma.barang.count();
+
+    return total;
+  }
+
+  async getLowStock(maxStock: number) {
+    const barang = await this.prisma.barang.findMany({
+      where: {
+        stok: {
+          lte: maxStock,
+        },
+      },
+      include: {
+        kategori: {
+          select: { nama: true },
+        },
+        satuan: {
+          select: { nama: true },
+        },
+        nomorLot: true,
+      },
+    });
+
+    const mappedBarang = barang.map((item) => {
+      // eslint-disable-next-line @typescript-eslint/no-unused-vars
+      const { kategori_id, satuan_id, harga, ...rest } = item;
+
+      return {
+        ...rest,
+        harga: Number(harga),
+        kategori: item.kategori?.nama,
+        satuan: item.satuan?.nama,
+      };
+    });
+
+    return {
+      data: mappedBarang,
+      meta: {
+        totalItems: barang.length,
+      },
+    };
+  }
+
+  async getLotNumberId() {
+    const today = new Date();
+
+    // Set waktu awal dan akhir hari
+    const startOfDay = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate(),
+    );
+    const endOfDay = new Date(
+      today.getFullYear(),
+      today.getMonth(),
+      today.getDate() + 1,
+    );
+
+    const lotNumber = await this.prisma.nomorLot.count({
+      where: {
+        createdAt: {
+          gte: startOfDay,
+          lt: endOfDay,
+        },
+      },
+    });
+
+    const countedLotNumber = lotNumber.toString().padStart(3, '0');
+
+    const date2Digit = today.getDate().toString().padStart(2, '0');
+    const month2Digit = (today.getMonth() + 1).toString().padStart(2, '0');
+    const year2Digit = today.getFullYear().toString().slice(-2);
+
+    const generatedLotNumber = `LOT${date2Digit}${month2Digit}${year2Digit}${countedLotNumber}`;
+
+    return {
+      data: generatedLotNumber,
     };
   }
 }

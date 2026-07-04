@@ -6,5 +6,6 @@ import { PrismaService } from 'src/prisma.service';
 @Module({
   controllers: [PermintaanBarangController],
   providers: [PermintaanBarangService, PrismaService],
+  exports: [PermintaanBarangService],
 })
 export class PermintaanBarangModule {}

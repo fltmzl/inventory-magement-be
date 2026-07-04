@@ -14,6 +14,7 @@ import { MailerModule } from '@nestjs-modules/mailer';
 import { ScheduleModule } from '@nestjs/schedule';
 import { constant } from './constant';
 // import { EjsAdapter } from '@nestjs-modules/mailer/dist/adapters/ejs.adapter';
+import { DashboardModule } from './dashboard/dashboard.module';
 
 @Module({
   imports: [
@@ -47,6 +48,7 @@ import { constant } from './constant';
       //   },
       // },
     }),
+    DashboardModule,
   ],
   controllers: [AppController],
   providers: [AppService],

@@ -7,5 +7,6 @@ import { MailService } from 'src/auth/mail.service';
 @Module({
   controllers: [BarangController],
   providers: [BarangService, PrismaService, MailService],
+  exports: [BarangService],
 })
 export class BarangModule {}
