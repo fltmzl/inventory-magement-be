@@ -19,4 +19,19 @@ export class DashboardController {
   getBestSelling(@Query('limit', ParseIntPipe) limit: number = 10) {
     return this.dashboardService.getBestSelling(limit);
   }
+
+  @Get('transaction-trend')
+  getTransactionTrend() {
+    return this.dashboardService.getTransactionTrend();
+  }
+
+  @Get('recent-activities')
+  getRecentActivities() {
+    return this.dashboardService.getRecentActivities();
+  }
+
+  @Get('category-distribution')
+  getCategoryDistribution() {
+    return this.dashboardService.getCategoryDistribution();
+  }
 }

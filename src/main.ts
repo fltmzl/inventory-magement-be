@@ -9,8 +9,15 @@ async function bootstrap() {
   // DTO Validation
   app.useGlobalPipes(new ValidationPipe());
 
+  const corsOrigins = process.env.CORS_ORIGIN
+    ? process.env.CORS_ORIGIN.split(',')
+        .map((origin) => origin.trim())
+        .filter(Boolean)
+    : '*';
+
   app.enableCors({
-    origin: '*',
+    origin:
+      corsOrigins.length === 1 && corsOrigins[0] === '*' ? '*' : corsOrigins,
   });
 
   // Prisma Exception / Error handling

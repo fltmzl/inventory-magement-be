@@ -148,7 +148,7 @@ async function main() {
   // FASE 1: SIMULASI HARIAN (Sept 2024 - Mar 2026)
   // ==========================================================================
   const currentDate = new Date('2024-09-01T00:00:00Z');
-  const endDate = new Date('2026-03-31T00:00:00Z');
+  const endDate = new Date('2026-07-18T00:00:00Z');
 
   let urutanMasuk = 1,
     urutanPermintaan = 1,

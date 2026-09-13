@@ -33,10 +33,27 @@ export class BarangService {
   }
 
   async setupStockCheckJob(
-    intervalInHours: number = this.SCHEDULER_INTERVAL_IN_HOURS,
+    cronExpression: string = CronExpression.EVERY_DAY_AT_6AM,
   ) {
-    // const job = new CronJob(`0 0-23/${intervalInHours} * * *`, () => {
-    const job = new CronJob(CronExpression.EVERY_5_SECONDS, async () => {
+    // =========================================================================
+    // PILIHAN JADWAL CRON (Bisa dipilih/di-uncomment sesuai kebutuhan):
+    // -------------------------------------------------------------------------
+    // 1. Setiap hari jam 6 pagi (Aktif saat ini):
+    //    CronExpression.EVERY_DAY_AT_6AM ('0 0 6 * * *')
+    //
+    // 2. Interval Jam (contoh: setiap X jam):
+    //    `0 0-23/${this.SCHEDULER_INTERVAL_IN_HOURS} * * *`
+    //
+    // 3. Interval Menit (contoh: setiap 5 menit):
+    //    CronExpression.EVERY_5_MINUTES
+    //
+    // 4. Interval Detik (untuk keperluan testing/demo):
+    //    CronExpression.EVERY_5_SECONDS
+    // =========================================================================
+
+    const selectedCron = cronExpression;
+
+    const job = new CronJob(selectedCron, async () => {
       console.log('CRON JOB CHECK STOK', this.getCurrentTime());
       const lowStock = await this.getLowStock(5);
       console.log({ lowStock: lowStock.data });
@@ -49,13 +66,16 @@ export class BarangService {
   }
 
   async updateStockCheckInterval(newIntervalInSeconds: number) {
-    // Remove the old job
+    // Hapus cron job lama jika ada
     const job = this.schedulerRegistry.getCronJob(this.CRON_JOB_STOCK);
-    job.stop();
-    this.schedulerRegistry.deleteCronJob(this.CRON_JOB_STOCK);
+    if (job) {
+      job.stop();
+      this.schedulerRegistry.deleteCronJob(this.CRON_JOB_STOCK);
+    }
 
-    // Add and start the updated job
-    await this.setupStockCheckJob(newIntervalInSeconds);
+    // Jalankan cron job baru berdasarkan interval detik yang dikirim
+    const cron = `*/${newIntervalInSeconds} * * * * *`;
+    await this.setupStockCheckJob(cron);
   }
 
   async create(createBarangDto: CreateBarangDto) {
@@ -190,6 +210,9 @@ export class BarangService {
         stok: {
           lte: maxStock,
         },
+      },
+      orderBy: {
+        stok: 'asc',
       },
       include: {
         kategori: {

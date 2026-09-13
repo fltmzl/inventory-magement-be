@@ -5,6 +5,7 @@ import { PermintaanBarangModule } from 'src/permintaan-barang/permintaan-barang.
 import { PelangganModule } from 'src/pelanggan/pelanggan.module';
 import { DashboardController } from './dashboard.controller';
 import { TransaksiBarangKeluarModule } from 'src/transaksi-barang-keluar/transaksi-barang-keluar.module';
+import { PrismaService } from 'src/prisma.service';
 
 @Module({
   imports: [
@@ -14,6 +15,6 @@ import { TransaksiBarangKeluarModule } from 'src/transaksi-barang-keluar/transak
     TransaksiBarangKeluarModule,
   ],
   controllers: [DashboardController],
-  providers: [DashboardService],
+  providers: [DashboardService, PrismaService],
 })
 export class DashboardModule {}

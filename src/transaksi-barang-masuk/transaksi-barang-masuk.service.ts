@@ -167,6 +167,9 @@ export class TransaksiBarangMasukService {
             },
           },
         },
+        orderBy: {
+          createdAt: 'desc',
+        },
       });
 
     const mappedTransaksiBarangMasuk = transaksiBarangMasuk.map((item) => {
