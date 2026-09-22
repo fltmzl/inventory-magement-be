@@ -51,6 +51,7 @@ export class TransaksiBarangKeluarService {
         });
 
         let remainingQty = item.jumlah;
+        let runningStock = barangMaster.stok;
 
         for (const lot of lots) {
           if (remainingQty <= 0) break;
@@ -80,6 +81,22 @@ export class TransaksiBarangKeluarService {
             hargaSatuan: barangMaster.harga,
           });
 
+          // Record stock movement OUT
+          await tx.stockMovement.create({
+            data: {
+              barang_id: item.id,
+              nomorLot_id: lot.nomorLot_id,
+              tipe: 'OUT',
+              jumlah: -deductQty,
+              stokSebelum: runningStock,
+              stokSesudah: runningStock - deductQty,
+              referensiId: id,
+              keterangan: `Pengiriman barang keluar untuk pesanan pelanggan (Ref: ${permintaanBarang_id})`,
+              tanggal: new Date(tanggal),
+            },
+          });
+
+          runningStock -= deductQty;
           remainingQty -= deductQty;
         }
 

@@ -83,6 +83,21 @@ export class BarangService {
       data: createBarangDto,
     });
 
+    if (createBarangDto.stok && createBarangDto.stok > 0) {
+      await this.prisma.stockMovement.create({
+        data: {
+          barang_id: barang.id,
+          tipe: 'INITIAL',
+          jumlah: createBarangDto.stok,
+          stokSebelum: 0,
+          stokSesudah: createBarangDto.stok,
+          referensiId: barang.id,
+          keterangan: 'Inisialisasi saldo awal barang',
+          tanggal: new Date(),
+        },
+      });
+    }
+
     return {
       data: barang,
       message: 'Barang ditambahkan',
@@ -169,6 +184,11 @@ export class BarangService {
   }
 
   async update(id: string, updateBarangDto: UpdateBarangDto) {
+    const existingBarang = await this.prisma.barang.findUnique({
+      where: { id },
+      select: { stok: true },
+    });
+
     const barang = await this.prisma.barang.update({
       where: { id },
       data: updateBarangDto,
@@ -176,6 +196,26 @@ export class BarangService {
         id: true,
       },
     });
+
+    if (
+      existingBarang &&
+      updateBarangDto.stok !== undefined &&
+      updateBarangDto.stok !== existingBarang.stok
+    ) {
+      const diff = updateBarangDto.stok - existingBarang.stok;
+      await this.prisma.stockMovement.create({
+        data: {
+          barang_id: id,
+          tipe: 'ADJUSTMENT',
+          jumlah: diff,
+          stokSebelum: existingBarang.stok,
+          stokSesudah: updateBarangDto.stok,
+          referensiId: `ADJ-${Date.now()}`,
+          keterangan: 'Penyesuaian stok manual / Stock opname',
+          tanggal: new Date(),
+        },
+      });
+    }
 
     return {
       data: {

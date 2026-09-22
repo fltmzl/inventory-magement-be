@@ -69,6 +69,7 @@ model Barang {
   transaksiBarangMasuk    DetailTransaksiBarangMasuk[]
   transaksiBarangKeluar   DetailTransaksiBarangKeluar[]
   permintaanBarang        DetailPermintaanBarang[]
+  stockMovement           StockMovement[]
   createdAt               DateTime  @default(now())
   updatedAt               DateTime  @updatedAt
 }
@@ -79,6 +80,7 @@ model NomorLot {
   barang          DetailNomorLotBarang[]
   transaksiBarangMasuk  TransaksiBarangMasuk?
   transaksiBarangKeluar DetailTransaksiBarangKeluar[]
+  stockMovement   StockMovement[]
   createdAt       DateTime  @default(now())
   updatedAt       DateTime  @updatedAt
 }
@@ -162,6 +164,34 @@ model DetailTransaksiBarangKeluar {
 
   @@id([transaksiBarangKeluar_id, barang_id, nomorLot_id])
 }
+
+enum MovementType {
+  INITIAL
+  IN
+  OUT
+  ADJUSTMENT
+}
+
+model StockMovement {
+  id              String        @id @default(uuid())
+  barang_id       String
+  barang          Barang        @relation(fields: [barang_id], references: [id], onDelete: Cascade)
+  nomorLot_id     String?
+  nomorLot        NomorLot?     @relation(fields: [nomorLot_id], references: [id], onDelete: SetNull)
+  tipe            MovementType
+  jumlah          Int
+  stokSebelum     Int
+  stokSesudah     Int
+  referensiId     String?
+  keterangan      String?
+  tanggal         DateTime      @default(now())
+  createdAt       DateTime      @default(now())
+
+  @@index([barang_id])
+  @@index([tanggal])
+  @@index([referensiId])
+}
+
 enum Role {
   ADMIN
   OWNER

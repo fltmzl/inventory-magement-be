@@ -15,6 +15,7 @@ import { ScheduleModule } from '@nestjs/schedule';
 import { constant } from './constant';
 // import { EjsAdapter } from '@nestjs-modules/mailer/dist/adapters/ejs.adapter';
 import { DashboardModule } from './dashboard/dashboard.module';
+import { StockMovementModule } from './stock-movement/stock-movement.module';
 
 @Module({
   imports: [
@@ -49,6 +50,7 @@ import { DashboardModule } from './dashboard/dashboard.module';
       // },
     }),
     DashboardModule,
+    StockMovementModule,
   ],
   controllers: [AppController],
   providers: [AppService],

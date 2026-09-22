@@ -8,6 +8,7 @@ async function main() {
   await prisma.$executeRawUnsafe(`DELETE FROM "DetailTransaksiBarangKeluar";`);
   await prisma.$executeRawUnsafe(`DELETE FROM "DetailPermintaanBarang";`);
   await prisma.$executeRawUnsafe(`DELETE FROM "DetailNomorLotBarang";`);
+  await prisma.$executeRawUnsafe(`DELETE FROM "StockMovement";`);
   await prisma.$executeRawUnsafe(`DELETE FROM "TransaksiBarangMasuk";`);
   await prisma.$executeRawUnsafe(`DELETE FROM "TransaksiBarangKeluar";`);
   await prisma.$executeRawUnsafe(`DELETE FROM "PermintaanBarang";`);

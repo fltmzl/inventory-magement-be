@@ -142,6 +142,20 @@ async function main() {
       },
     });
     await prisma.detailNomorLotBarang.createMany({ data: dbLotUpdatesAwal });
+
+    const stockMovementsAwal = detailMasukAwal.map((d) => ({
+      barang_id: d.barang_id,
+      nomorLot_id: lotAwal.id,
+      tipe: 'INITIAL' as const,
+      jumlah: d.jumlah,
+      stokSebelum: 0,
+      stokSesudah: d.jumlah,
+      referensiId: trmAwalId,
+      keterangan: 'Inisialisasi Saldo Awal Gudang',
+      tanggal: tglSaldoAwal,
+      createdAt: tglSaldoAwal,
+    }));
+    await prisma.stockMovement.createMany({ data: stockMovementsAwal });
   }
 
   // ==========================================================================
@@ -243,6 +257,23 @@ async function main() {
         });
 
         await prisma.detailNomorLotBarang.createMany({ data: dbLotUpdates });
+
+        const stockMovementsMasuk = detailMasukData.map((d) => {
+          const currentStokNow = globalStockTracker.get(d.barang_id) || 0;
+          return {
+            barang_id: d.barang_id,
+            nomorLot_id: nomorLot.id,
+            tipe: 'IN' as const,
+            jumlah: d.jumlah,
+            stokSebelum: currentStokNow - d.jumlah,
+            stokSesudah: currentStokNow,
+            referensiId: trxMasukId,
+            keterangan: `Penerimaan barang masuk dari pembelian (Lot: ${nomorLot.kode})`,
+            tanggal: waktuMasuk,
+            createdAt: waktuMasuk,
+          };
+        });
+        await prisma.stockMovement.createMany({ data: stockMovementsMasuk });
 
         for (const d of detailMasukData) {
           await prisma.barang.update({
@@ -387,6 +418,23 @@ async function main() {
         });
 
         await Promise.all(updateLotDbTasks);
+
+        const stockMovementsKeluar = detailKeluarData.map((d) => {
+          const currentStokNow = globalStockTracker.get(d.barang_id) || 0;
+          return {
+            barang_id: d.barang_id,
+            nomorLot_id: d.nomorLot_id,
+            tipe: 'OUT' as const,
+            jumlah: -d.jumlah,
+            stokSebelum: currentStokNow + d.jumlah,
+            stokSesudah: currentStokNow,
+            referensiId: trxKeluarId,
+            keterangan: `Pengiriman barang keluar (Ref: ${kirim.permintaan_id})`,
+            tanggal: kirim.tanggalKirim,
+            createdAt: kirim.tanggalKirim,
+          };
+        });
+        await prisma.stockMovement.createMany({ data: stockMovementsKeluar });
 
         for (const d of kirim.details) {
           await prisma.barang.update({

@@ -26,20 +26,9 @@ export class TransaksiBarangMasukService {
       };
     });
 
-    const queryForIncrementStock = mappedItems.map((item) => {
-      return this.prisma.barang.update({
-        where: { id: item.barang_id },
-        data: {
-          stok: {
-            increment: item.jumlah,
-          },
-        },
-      });
-    });
-
-    const [transaksiBarang] = await this.prisma.$transaction([
-      // Create transaksi barang masuk
-      this.prisma.transaksiBarangMasuk.create({
+    const transaksiBarang = await this.prisma.$transaction(async (tx) => {
+      // 1. Create header with lot and details
+      const trx = await tx.transaksiBarangMasuk.create({
         data: {
           id,
           tanggal,
@@ -60,11 +49,46 @@ export class TransaksiBarangMasukService {
             },
           },
         },
-      }),
+        include: {
+          nomorLot: true,
+        },
+      });
 
-      // Update stock
-      ...queryForIncrementStock,
-    ]);
+      // 2. Update stock and record stock movements
+      for (const item of barang) {
+        const currentBarang = await tx.barang.findUnique({
+          where: { id: item.id },
+          select: { stok: true },
+        });
+
+        const stokSebelum = currentBarang ? currentBarang.stok : 0;
+        const stokSesudah = stokSebelum + item.jumlah;
+
+        await tx.barang.update({
+          where: { id: item.id },
+          data: {
+            stok: stokSesudah,
+            pembelianTerakhir: new Date(tanggal),
+          },
+        });
+
+        await tx.stockMovement.create({
+          data: {
+            barang_id: item.id,
+            nomorLot_id: trx.nomorLot_id,
+            tipe: 'IN',
+            jumlah: item.jumlah,
+            stokSebelum,
+            stokSesudah,
+            referensiId: id,
+            keterangan: `Penerimaan barang masuk dari pembelian (Lot: ${nomorLot})`,
+            tanggal: new Date(tanggal),
+          },
+        });
+      }
+
+      return trx;
+    });
 
     return {
       data: transaksiBarang,
