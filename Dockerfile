@@ -1,7 +1,4 @@
-FROM node:20-alpine
-
-# Install build dependencies for native modules (bcrypt) and openssl for Prisma
-RUN apk add --no-cache openssl libc6-compat python3 make g++
+FROM node:20-slim
 
 WORKDIR /app
 
