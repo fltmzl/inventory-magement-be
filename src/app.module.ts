@@ -31,15 +31,16 @@ import { StockMovementModule } from './stock-movement/stock-movement.module';
     ScheduleModule.forRoot(),
     MailerModule.forRoot({
       transport: {
-        host: constant.MAIL.HOST,
-        secure: false,
+        host: constant.MAIL.HOST || 'smtp.gmail.com',
+        port: 465,
+        secure: true,
         auth: {
           user: constant.MAIL.USER,
           pass: constant.MAIL.PASSWORD,
         },
       },
       defaults: {
-        from: '"nest-modules" <modules@nestjs.com>',
+        from: `"Inventory Management System" <${constant.MAIL.USER || 'noreply@gmail.com'}>`,
       },
       // template: {
       //   dir: __dirname + '/templates',

@@ -50,6 +50,17 @@ export class BarangController {
     return this.barangService.updateStockCheckInterval(intervalInSeconds);
   }
 
+  @Get('test-stock-email')
+  async testStockEmail() {
+    const lowStock = await this.barangService.getLowStock(3);
+    await this.barangService.handleCron(lowStock.data);
+    return {
+      message: 'Email notifikasi stok berhasil diproses',
+      itemsCount: lowStock.data.length,
+      items: lowStock.data,
+    };
+  }
+
   @Get('get-low-stock/:maxStock')
   getLowStock(@Param('maxStock') maxStock: number) {
     return this.barangService.getLowStock(maxStock);

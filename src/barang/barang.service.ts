@@ -2,7 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { CreateBarangDto } from './dto/create-barang.dto';
 import { UpdateBarangDto } from './dto/update-barang.dto';
 import { PrismaService } from 'src/prisma.service';
-import { Cron, CronExpression, SchedulerRegistry } from '@nestjs/schedule';
+import { CronExpression, SchedulerRegistry } from '@nestjs/schedule';
 import { MailService } from 'src/auth/mail.service';
 import { CronJob } from 'cron';
 
@@ -18,9 +18,15 @@ export class BarangService {
   private SCHEDULER_INTERVAL_IN_HOURS = 1;
 
   // @Cron(CronExpression.EVERY_5_MINUTES)
-  handleCron() {
+  async handleCron(items?: any[]) {
     console.log('CRON EMAIL JALAN', new Date().getHours());
-    // this.mailService.sendEmail();
+    try {
+      const stockItems = items ?? (await this.getLowStock(3)).data;
+      await this.mailService.sendStockAlertEmail(stockItems);
+      console.log('CRON EMAIL: Notifikasi email berhasil dikirim');
+    } catch (error) {
+      console.error('CRON EMAIL GAGAL:', error?.message || error);
+    }
   }
 
   getCurrentTime(): string {
@@ -33,7 +39,8 @@ export class BarangService {
   }
 
   async setupStockCheckJob(
-    cronExpression: string = CronExpression.EVERY_DAY_AT_6AM,
+    cronExpression: string = CronExpression.EVERY_WEEK,
+    // cronExpression: string = CronExpression.EVERY_MINUTE,
   ) {
     // =========================================================================
     // PILIHAN JADWAL CRON (Bisa dipilih/di-uncomment sesuai kebutuhan):
@@ -55,9 +62,9 @@ export class BarangService {
 
     const job = new CronJob(selectedCron, async () => {
       console.log('CRON JOB CHECK STOK', this.getCurrentTime());
-      const lowStock = await this.getLowStock(5);
+      const lowStock = await this.getLowStock(3);
       console.log({ lowStock: lowStock.data });
-      this.handleCron();
+      await this.handleCron(lowStock.data);
     });
 
     this.schedulerRegistry.addCronJob(this.CRON_JOB_STOCK, job);
@@ -261,17 +268,17 @@ export class BarangService {
         satuan: {
           select: { nama: true },
         },
-        nomorLot: true,
       },
     });
 
     const mappedBarang = barang.map((item) => {
       // eslint-disable-next-line @typescript-eslint/no-unused-vars
-      const { kategori_id, satuan_id, harga, ...rest } = item;
+      const { kategori_id, satuan_id, harga, harga_jual, ...rest } = item;
 
       return {
         ...rest,
         harga: Number(harga),
+        harga_jual: Number(harga_jual || 0),
         kategori: item.kategori?.nama,
         satuan: item.satuan?.nama,
       };
