@@ -87,7 +87,16 @@ export class BarangService {
 
   async create(createBarangDto: CreateBarangDto) {
     const barang = await this.prisma.barang.create({
-      data: createBarangDto,
+      data: {
+        id: createBarangDto.id,
+        nama: createBarangDto.nama,
+        kategori_id: createBarangDto.kategori_id,
+        satuan_id: createBarangDto.satuan_id,
+        stok: createBarangDto.stok,
+        harga: createBarangDto.harga,
+        harga_jual: createBarangDto.harga_jual,
+        pembelianTerakhir: new Date(createBarangDto.pembelianTerakhir),
+      },
     });
 
     if (createBarangDto.stok && createBarangDto.stok > 0) {
@@ -106,7 +115,11 @@ export class BarangService {
     }
 
     return {
-      data: barang,
+      data: {
+        ...barang,
+        harga: Number(barang.harga),
+        harga_jual: Number(barang.harga_jual),
+      },
       message: 'Barang ditambahkan',
     };
   }
@@ -148,6 +161,7 @@ export class BarangService {
         ...item,
         nomorLot: item.nomorLot.map((lot) => lot.nomorLot.kode),
         harga: Number(item.harga),
+        harga_jual: Number(item.harga_jual),
       };
     });
 
@@ -185,8 +199,18 @@ export class BarangService {
       },
     });
 
+    if (!barang) {
+      return {
+        data: null,
+      };
+    }
+
     return {
-      data: barang,
+      data: {
+        ...barang,
+        harga: Number(barang.harga),
+        harga_jual: Number(barang.harga_jual),
+      },
     };
   }
 
@@ -196,9 +220,17 @@ export class BarangService {
       select: { stok: true },
     });
 
+    const updateData: any = { ...updateBarangDto };
+
+    if (updateBarangDto.pembelianTerakhir) {
+      updateData.pembelianTerakhir = new Date(
+        updateBarangDto.pembelianTerakhir,
+      );
+    }
+
     const barang = await this.prisma.barang.update({
       where: { id },
-      data: updateBarangDto,
+      data: updateData,
       select: {
         id: true,
       },

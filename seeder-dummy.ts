@@ -3,12 +3,12 @@ import { PrismaClient } from '@prisma/client';
 const prisma = new PrismaClient();
 
 // ============================================================================
-// HELPER FUNCTIONS
+// HELPER FUNCTIONS & PROFILING BARANG AKTIF
 // ============================================================================
 function formatDDMMYY(date: Date) {
-  const d = String(date.getDate()).padStart(2, '0');
-  const m = String(date.getMonth() + 1).padStart(2, '0');
-  const y = String(date.getFullYear()).slice(-2);
+  const d = String(date.getUTCDate()).padStart(2, '0');
+  const m = String(date.getUTCMonth() + 1).padStart(2, '0');
+  const y = String(date.getUTCFullYear()).slice(-2);
   return `${d}${m}${y}`;
 }
 
@@ -29,7 +29,7 @@ function getRandomItems(array: any[], count: number) {
 
 function randomizeTime(date: Date, startHour: number, endHour: number) {
   const newDate = new Date(date);
-  newDate.setHours(
+  newDate.setUTCHours(
     getRandomInt(startHour, endHour),
     getRandomInt(0, 59),
     getRandomInt(0, 59),
@@ -38,62 +38,298 @@ function randomizeTime(date: Date, startHour: number, endHour: number) {
   return newDate;
 }
 
+function getRandomInitialStock() {
+  const pool = [0, 0, 0, 1, 1, 2];
+  return pool[Math.floor(Math.random() * pool.length)];
+}
+
+// Daftar kata kunci bahan aktif riil yang dipesan oleh restoran aktif saat ini
+const ACTIVE_ITEM_KEYWORDS = [
+  'bakso',
+  'bayam',
+  'buncis',
+  'beby buncis',
+  'bengkoang',
+  'brokoli',
+  'daun jeruk',
+  'mint',
+  'pandan',
+  'parsley',
+  'petersely',
+  'pepaya',
+  'salam',
+  'singkong',
+  'gingseng',
+  'ginseng',
+  'glandir',
+  'jagung',
+  'jamur',
+  'jeruk',
+  'jipang',
+  'kacang panjang',
+  'kangkung',
+  'kapri',
+  'kemangi',
+  'kembang kol',
+  'ketela',
+  'telo',
+  'kol',
+  'lele',
+  'mangga',
+  'pedho',
+  'pete',
+  'pisang',
+  'pokcoy',
+  'pakcoy',
+  'sawi',
+  'caisim',
+  'selada',
+  'seledri',
+  'tahu',
+  'tauge',
+  'taoge',
+  'telor',
+  'telur',
+  'tempe',
+  'teri',
+  'timun',
+  'tomat',
+  'unclang',
+  'onclang',
+  'daun bawang',
+  'wortel',
+  'ayam',
+  'daging',
+  'bawang',
+  'cabai',
+  'cabe',
+];
+
+/**
+ * Karakteristik proporsional agar TARGET SUSUT BERADA DI KISARAN 1% - 5%
+ */
+function getItemProfile(nama: string) {
+  const n = nama.toLowerCase();
+
+  // Bumbu daun kering / aromatik awet (daun jeruk, salam, pandan): tahan 30 hari
+  if (n.includes('daun jeruk') || n.includes('salam') || n.includes('pandan')) {
+    return {
+      shelfLifeDays: 30,
+      isFastMoving: false,
+      restockQty: [2, 4] as [number, number],
+      reorderPoint: 0,
+      orderQtyRange: [1, 2] as [number, number],
+    };
+  }
+
+  // Jamur (hyoko, kuping, tiram, shitake): tahan 14 hari
+  if (n.includes('jamur')) {
+    return {
+      shelfLifeDays: 14,
+      isFastMoving: false,
+      restockQty: [2, 4] as [number, number],
+      reorderPoint: 0,
+      orderQtyRange: [1, 2] as [number, number],
+    };
+  }
+
+  // Daging & Ayam segar: tahan 8 hari di pendingin
+  if (
+    n.includes('ayam') ||
+    n.includes('daging') ||
+    n.includes('lele') ||
+    n.includes('bakso') ||
+    n.includes('teri')
+  ) {
+    return {
+      shelfLifeDays: 8,
+      isFastMoving: true,
+      restockQty: [8, 14] as [number, number],
+      reorderPoint: 2,
+      orderQtyRange: [2, 4] as [number, number],
+    };
+  }
+
+  // Sayuran daun segar (bayam, kangkung, sawi, selada, pokcoy): tahan 8 hari
+  if (
+    n.includes('bayam') ||
+    n.includes('kangkung') ||
+    n.includes('sawi') ||
+    n.includes('selada') ||
+    n.includes('pokcoy') ||
+    n.includes('pakcoy') ||
+    n.includes('caisim') ||
+    n.includes('brokoli') ||
+    n.includes('tauge') ||
+    n.includes('taoge') ||
+    n.includes('kemangi') ||
+    n.includes('seledri') ||
+    n.includes('unclang') ||
+    n.includes('onclang') ||
+    n.includes('glandir') ||
+    n.includes('gingseng') ||
+    n.includes('ginseng')
+  ) {
+    return {
+      shelfLifeDays: 8,
+      isFastMoving: true,
+      restockQty: [8, 14] as [number, number],
+      reorderPoint: 2,
+      orderQtyRange: [2, 5] as [number, number],
+    };
+  }
+
+  // Sayur buah & kedelai (tomat, terong, timun, buncis, tempe, tahu): tahan 12 hari
+  if (
+    n.includes('tomat') ||
+    n.includes('terong') ||
+    n.includes('timun') ||
+    n.includes('buncis') ||
+    n.includes('tempe') ||
+    n.includes('tahu') ||
+    n.includes('kacang panjang') ||
+    n.includes('kembang kol') ||
+    n.includes('jipang') ||
+    n.includes('kapri')
+  ) {
+    return {
+      shelfLifeDays: 12,
+      isFastMoving:
+        n.includes('tomat') ||
+        n.includes('tempe') ||
+        n.includes('tahu') ||
+        n.includes('buncis'),
+      restockQty: [8, 14] as [number, number],
+      reorderPoint: 2,
+      orderQtyRange: [2, 4] as [number, number],
+    };
+  }
+
+  // Umbi & Sayur keras (kentang, wortel, jagung, kol, ketela, singkong): tahan 20 hari
+  if (
+    n.includes('kentang') ||
+    n.includes('wortel') ||
+    n.includes('jagung') ||
+    n.includes('kol') ||
+    n.includes('ketela') ||
+    n.includes('telo') ||
+    n.includes('singkong') ||
+    n.includes('bengkoang') ||
+    n.includes('labu')
+  ) {
+    return {
+      shelfLifeDays: 20,
+      isFastMoving:
+        n.includes('wortel') || n.includes('jagung') || n.includes('kol'),
+      restockQty: [8, 14] as [number, number],
+      reorderPoint: 2,
+      orderQtyRange: [2, 4] as [number, number],
+    };
+  }
+
+  // Bumbu segar & buah (cabai, bawang, jeruk, pisang): tahan 25 hari
+  if (
+    n.includes('cabai') ||
+    n.includes('cabe') ||
+    n.includes('bawang') ||
+    n.includes('jeruk') ||
+    n.includes('pisang') ||
+    n.includes('mangga')
+  ) {
+    return {
+      shelfLifeDays: 25,
+      isFastMoving:
+        n.includes('bawang') || n.includes('cabai') || n.includes('cabe'),
+      restockQty: [10, 16] as [number, number],
+      reorderPoint: 3,
+      orderQtyRange: [2, 4] as [number, number],
+    };
+  }
+
+  // Default komoditas
+  return {
+    shelfLifeDays: 14,
+    isFastMoving: false,
+    restockQty: [3, 5] as [number, number],
+    reorderPoint: 1,
+    orderQtyRange: [1, 2] as [number, number],
+  };
+}
+
 // ============================================================================
 // MAIN SEEDER LOGIC
 // ============================================================================
 async function main() {
   console.log(
-    '🚀 Mulai generate data simulasi (Sept 2024 - Mar 2026) dengan Order Selang-Seling...',
+    '🚀 Memulai simulasi inventaris realistis & seimbang (Target Susut 1% - 5%)...',
   );
+
+  // --------------------------------------------------------------------------
+  // STEP 0: BERSIHKAN TRANSAKSI SIMULASI SEBELUMNYA
+  // --------------------------------------------------------------------------
+  console.log('🧹 Membersihkan database riwayat transaksi lama...');
+  await prisma.detailTransaksiBarangKeluar.deleteMany();
+  await prisma.transaksiBarangKeluar.deleteMany();
+  await prisma.detailPermintaanBarang.deleteMany();
+  await prisma.permintaanBarang.deleteMany();
+  await prisma.detailTransaksiBarangMasuk.deleteMany();
+  await prisma.transaksiBarangMasuk.deleteMany();
+  await prisma.detailNomorLotBarang.deleteMany();
+  await prisma.stockMovement.deleteMany();
+  await prisma.nomorLot.deleteMany();
+
+  // Reset semua barang ke stok 0
+  await prisma.barang.updateMany({
+    data: { stok: 0 },
+  });
 
   const pelanggan = await prisma.pelanggan.findMany();
   const pegawai = await prisma.pegawai.findFirst({ where: { role: 'ADMIN' } });
-  const semuaBarang = await prisma.barang.findMany({
+  const semuaBarangMaster = await prisma.barang.findMany({
     include: { kategori: true },
   });
 
-  if (!pegawai || pelanggan.length === 0 || semuaBarang.length === 0) {
+  if (!pegawai || pelanggan.length === 0 || semuaBarangMaster.length === 0) {
     throw new Error(
       'Data Master (Pegawai, Pelanggan, atau Barang) belum ada di DB!',
     );
   }
 
-  const barangSayurBuah = semuaBarang.filter(
-    (b) => b.kategori.kode === 'K001' || b.kategori.kode === 'K003',
+  // HANYA AKTIFKAN BARANG RIIL YANG DIPESAN RESTORAN
+  const barangAktif = semuaBarangMaster.filter((b) =>
+    ACTIVE_ITEM_KEYWORDS.some((kw) => b.nama.toLowerCase().includes(kw)),
   );
-  const barangBumbuMentah = semuaBarang.filter(
-    (b) => b.kategori.kode === 'K002' || b.kategori.kode === 'K004',
+  console.log(
+    `📦 Total Master Barang: ${semuaBarangMaster.length} | Barang Aktif Beroperasi: ${barangAktif.length}`,
   );
 
-  const kataKunciLangganan = [
-    'bayam',
-    'kangkung',
-    'glandir',
-    'gingseng',
-    'buncis',
-    'brokoli',
-    'tempe',
-    'tomat',
-    'timun',
-    'bawang',
-    'cabai',
-    'beras',
-    'telur',
-  ];
-  const barangLangganan = semuaBarang.filter((b) =>
-    kataKunciLangganan.some((k) => b.nama.toLowerCase().includes(k)),
+  const itemProfiles = new Map<string, ReturnType<typeof getItemProfile>>();
+  barangAktif.forEach((b) => {
+    itemProfiles.set(b.id, getItemProfile(b.nama));
+  });
+
+  const barangFastMoving = barangAktif.filter(
+    (b) => itemProfiles.get(b.id)!.isFastMoving,
   );
-  const barangRandom = semuaBarang.filter(
-    (b) => !kataKunciLangganan.some((k) => b.nama.toLowerCase().includes(k)),
+  const barangSlowMoving = barangAktif.filter(
+    (b) => !itemProfiles.get(b.id)!.isFastMoving,
   );
 
   const globalStockTracker = new Map<string, number>();
-  const lotFifoQueue = new Map<string, { lotId: string; qty: number }[]>();
+  const lotFifoQueue = new Map<
+    string,
+    { lotId: string; qty: number; tglMasuk: Date }[]
+  >();
+
+  barangAktif.forEach((b) => {
+    globalStockTracker.set(b.id, 0);
+    lotFifoQueue.set(b.id, []);
+  });
 
   // ==========================================================================
-  // FASE 0: INJEKSI SALDO AWAL (31 AGUSTUS 2024)
+  // FASE 0: SALDO AWAL GUDANG (31 AGUSTUS 2024)
   // ==========================================================================
-  console.log('📦 Memproses Saldo Awal Gudang...');
+  console.log('📦 Menyiapkan saldo awal gudang per 31 Agustus 2024...');
   const tglSaldoAwal = new Date('2024-08-31T23:59:59Z');
 
   const lotAwalId = generateId('LOT', tglSaldoAwal, 0);
@@ -103,14 +339,26 @@ async function main() {
 
   const detailMasukAwal: any[] = [];
   const dbLotUpdatesAwal: any[] = [];
+  const updateBarangPromises: any[] = [];
   let totalHargaAwal = 0;
 
-  semuaBarang.forEach((b) => {
-    const stokAwal = b.stok; // Baca stok awal dari database
+  barangAktif.forEach((b) => {
+    const stokAwal = getRandomInitialStock();
     globalStockTracker.set(b.id, stokAwal);
 
+    updateBarangPromises.push(
+      prisma.barang.update({
+        where: { id: b.id },
+        data: { stok: stokAwal, pembelianTerakhir: tglSaldoAwal },
+      }),
+    );
+
     if (stokAwal > 0) {
-      lotFifoQueue.set(b.id, [{ lotId: lotAwal.id, qty: stokAwal }]);
+      lotFifoQueue.get(b.id)!.push({
+        lotId: lotAwal.id,
+        qty: stokAwal,
+        tglMasuk: tglSaldoAwal,
+      });
       totalHargaAwal += stokAwal * Number(b.harga);
 
       detailMasukAwal.push({
@@ -123,10 +371,10 @@ async function main() {
         barang_id: b.id,
         totalBarang: stokAwal,
       });
-    } else {
-      lotFifoQueue.set(b.id, []);
     }
   });
+
+  await Promise.all(updateBarangPromises);
 
   if (detailMasukAwal.length > 0) {
     const trmAwalId = generateId('TRM', tglSaldoAwal, 0);
@@ -159,10 +407,14 @@ async function main() {
   }
 
   // ==========================================================================
-  // FASE 1: SIMULASI HARIAN (Sept 2024 - Mar 2026)
+  // FASE 1: SIMULASI HARIAN (01 Sept 2024 s/d 30 Sept 2026)
   // ==========================================================================
-  const currentDate = new Date('2024-09-01T00:00:00Z');
-  const endDate = new Date('2026-07-18T00:00:00Z');
+  console.log(
+    '🔄 Menjalankan simulasi harian realistis (Sept 2024 - Sept 2026)...',
+  );
+  const startDate = new Date('2024-09-01T00:00:00Z');
+  const currentDate = new Date(startDate);
+  const endDate = new Date('2026-09-30T00:00:00Z');
 
   let urutanMasuk = 1,
     urutanPermintaan = 1,
@@ -171,32 +423,130 @@ async function main() {
   let queuePermintaan: any[] = [];
 
   while (currentDate <= endDate) {
-    const hariKe = Math.floor(
-      (currentDate.getTime() - new Date('2024-09-01T00:00:00Z').getTime()) /
-        (1000 * 60 * 60 * 24),
-    );
+    const dayOfWeek = currentDate.getUTCDay();
     urutanMasuk = 1;
     urutanPermintaan = 1;
     urutanKeluar = 1;
     urutanLot = 1;
 
     // ------------------------------------------------------------------------
-    // LOGIKA A: BARANG MASUK
+    // LOGIKA 1: AUDIT SORTASI & SUSUT ALAMI UJUNG LOT (1% - 5% TARGET)
     // ------------------------------------------------------------------------
-    const isRestokSayur = hariKe % 3 === 0;
-    const isRestokBumbu = hariKe % 6 === 0;
+    for (const b of barangAktif) {
+      const prof = itemProfiles.get(b.id)!;
+      const lots = lotFifoQueue.get(b.id) || [];
+      const expiredLots: { lotId: string; qty: number }[] = [];
 
-    if (isRestokSayur || isRestokBumbu) {
-      const itemsToBuy = [];
-      if (isRestokSayur)
-        itemsToBuy.push(
-          ...getRandomItems(barangSayurBuah, getRandomInt(15, 30)),
-        );
-      if (isRestokBumbu)
-        itemsToBuy.push(
-          ...getRandomItems(barangBumbuMentah, getRandomInt(20, 35)),
+      for (const lot of lots) {
+        if (lot.qty <= 0) continue;
+        const ageDays = Math.floor(
+          (currentDate.getTime() - lot.tglMasuk.getTime()) /
+            (1000 * 60 * 60 * 24),
         );
 
+        if (ageDays >= prof.shelfLifeDays) {
+          // Susut alami ujung lot / sortasi layu (1 - 2 unit wajar)
+          const qtyAfkir = Math.min(lot.qty, getRandomInt(1, 2));
+          expiredLots.push({ lotId: lot.lotId, qty: qtyAfkir });
+          lot.qty -= qtyAfkir;
+
+          // Perbarui tanggal simpan sisa yang telah disortir
+          if (lot.qty > 0) {
+            lot.tglMasuk = new Date(
+              currentDate.getTime() -
+                (prof.shelfLifeDays - 3) * 24 * 60 * 60 * 1000,
+            );
+          }
+        }
+      }
+
+      if (expiredLots.length > 0) {
+        lotFifoQueue.set(
+          b.id,
+          lots.filter((l) => l.qty > 0),
+        );
+
+        for (const exp of expiredLots) {
+          const currentStokNow = globalStockTracker.get(b.id) || 0;
+          const sisaStokBaru = Math.max(0, currentStokNow - exp.qty);
+          globalStockTracker.set(b.id, sisaStokBaru);
+
+          const currentLotInDb = await prisma.detailNomorLotBarang.findUnique({
+            where: {
+              nomorLot_id_barang_id: {
+                nomorLot_id: exp.lotId,
+                barang_id: b.id,
+              },
+            },
+          });
+
+          await prisma.detailNomorLotBarang.update({
+            where: {
+              nomorLot_id_barang_id: {
+                nomorLot_id: exp.lotId,
+                barang_id: b.id,
+              },
+            },
+            data: {
+              totalBarang: Math.max(
+                0,
+                (currentLotInDb?.totalBarang || 0) - exp.qty,
+              ),
+            },
+          });
+
+          const waktuAfkir = randomizeTime(currentDate, 6, 7);
+          await prisma.stockMovement.create({
+            data: {
+              barang_id: b.id,
+              nomorLot_id: exp.lotId,
+              tipe: 'ADJUSTMENT',
+              jumlah: -exp.qty,
+              stokSebelum: currentStokNow,
+              stokSesudah: sisaStokBaru,
+              referensiId: exp.lotId,
+              keterangan: `Penyusutan/Afkir: Sortasi susut timbangan & layu (${b.nama})`,
+              tanggal: waktuAfkir,
+              createdAt: waktuAfkir,
+            },
+          });
+
+          await prisma.barang.update({
+            where: { id: b.id },
+            data: {
+              stok: sisaStokBaru,
+              updatedAt: waktuAfkir,
+            },
+          });
+        }
+      }
+    }
+
+    // ------------------------------------------------------------------------
+    // LOGIKA 2: RESTOK PASAR TERUKUR (HANYA BELI SAAT STOK MENIPIS)
+    // ------------------------------------------------------------------------
+    const isHariPasar = [1, 3, 5, 6].includes(dayOfWeek);
+
+    const itemsToRestock: {
+      barang: (typeof barangAktif)[0];
+      qty: number;
+    }[] = [];
+
+    for (const b of barangAktif) {
+      const prof = itemProfiles.get(b.id)!;
+      const currentStok = globalStockTracker.get(b.id) || 0;
+
+      // Restok hanya jika stok di bawah reorder point
+      const butuhRestok =
+        currentStok <= prof.reorderPoint && (isHariPasar || currentStok === 0);
+
+      if (butuhRestok) {
+        const qtyToBuy = getRandomInt(prof.restockQty[0], prof.restockQty[1]);
+        itemsToRestock.push({ barang: b, qty: qtyToBuy });
+      }
+    }
+
+    if (itemsToRestock.length > 0) {
       let totalHargaBeli = 0;
       const detailMasukData: any[] = [];
       const dbLotUpdates: any[] = [];
@@ -207,39 +557,31 @@ async function main() {
         data: { kode: lotIdStr, createdAt: waktuMasuk, updatedAt: waktuMasuk },
       });
 
-      for (const b of itemsToBuy) {
+      for (const item of itemsToRestock) {
+        const b = item.barang;
+        const qty = item.qty;
         const currentStok = globalStockTracker.get(b.id) || 0;
-        const isLangganan = kataKunciLangganan.some((k) =>
-          b.nama.toLowerCase().includes(k),
-        );
-        let qtyToBuy = 0;
+        const hargaBeli = Number(b.harga);
 
-        if (b.kategori.kode === 'K001' || b.kategori.kode === 'K003') {
-          if (currentStok > 15) continue;
-          qtyToBuy = isLangganan ? getRandomInt(15, 25) : getRandomInt(3, 8);
-        } else {
-          if (currentStok > 30) continue;
-          qtyToBuy = isLangganan ? getRandomInt(20, 35) : getRandomInt(10, 20);
-        }
+        totalHargaBeli += qty * hargaBeli;
 
-        if (qtyToBuy > 0) {
-          const hargaBeli = Number(b.harga);
-          totalHargaBeli += qtyToBuy * hargaBeli;
+        detailMasukData.push({
+          barang_id: b.id,
+          jumlah: qty,
+          hargaSatuan: hargaBeli,
+        });
+        dbLotUpdates.push({
+          nomorLot_id: nomorLot.id,
+          barang_id: b.id,
+          totalBarang: qty,
+        });
 
-          detailMasukData.push({
-            barang_id: b.id,
-            jumlah: qtyToBuy,
-            hargaSatuan: hargaBeli,
-          });
-          dbLotUpdates.push({
-            nomorLot_id: nomorLot.id,
-            barang_id: b.id,
-            totalBarang: qtyToBuy,
-          });
-
-          globalStockTracker.set(b.id, currentStok + qtyToBuy);
-          lotFifoQueue.get(b.id)!.push({ lotId: nomorLot.id, qty: qtyToBuy });
-        }
+        globalStockTracker.set(b.id, currentStok + qty);
+        lotFifoQueue.get(b.id)!.push({
+          lotId: nomorLot.id,
+          qty: qty,
+          tglMasuk: waktuMasuk,
+        });
       }
 
       if (detailMasukData.length > 0) {
@@ -268,7 +610,7 @@ async function main() {
             stokSebelum: currentStokNow - d.jumlah,
             stokSesudah: currentStokNow,
             referensiId: trxMasukId,
-            keterangan: `Penerimaan barang masuk dari pembelian (Lot: ${nomorLot.kode})`,
+            keterangan: `Penerimaan restok barang masuk (Lot: ${nomorLot.kode})`,
             tanggal: waktuMasuk,
             createdAt: waktuMasuk,
           };
@@ -288,28 +630,43 @@ async function main() {
     }
 
     // ------------------------------------------------------------------------
-    // LOGIKA B: PERMINTAAN RESTORAN (SISTEM SELANG-SELING)
+    // LOGIKA 3: PERMINTAAN RESTORAN AKTIF
     // ------------------------------------------------------------------------
-    for (let i = 0; i < pelanggan.length; i++) {
-      const p = pelanggan[i];
+    const isWeekendPrep = dayOfWeek === 4 || dayOfWeek === 5;
+    const multiplier = isWeekendPrep ? 1.25 : 1.0;
 
-      // LOGIKA SELANG-SELING:
-      // Restoran index 0 order di hari Genap, Restoran index 1 order di hari Ganjil
-      if (hariKe % 2 === i % 2) {
-        const reqLangganan = getRandomItems(
-          barangLangganan,
-          getRandomInt(10, 18),
+    for (const p of pelanggan) {
+      if (Math.random() < 0.75) {
+        const reqFast = getRandomItems(
+          barangFastMoving,
+          Math.min(barangFastMoving.length, getRandomInt(12, 20)),
         );
-        const reqRandom = getRandomItems(barangRandom, getRandomInt(3, 8));
-        const itemsRequested = [...reqLangganan, ...reqRandom];
+
+        const slowWithStock = barangSlowMoving.filter(
+          (b) => (globalStockTracker.get(b.id) || 0) > 0,
+        );
+        const reqSlow = getRandomItems(
+          slowWithStock.length >= 5 ? slowWithStock : barangSlowMoving,
+          getRandomInt(4, 8),
+        );
+
+        const itemsRequested = [...reqFast, ...reqSlow];
 
         const waktuRequest = randomizeTime(currentDate, 19, 22);
         const reqId = generateId('PB', waktuRequest, urutanPermintaan++);
 
-        const detailReqData = itemsRequested.map((b) => ({
-          barang_id: b.id,
-          jumlah: getRandomInt(3, 10),
-        }));
+        const detailReqData = itemsRequested.map((b) => {
+          const prof = itemProfiles.get(b.id)!;
+          const baseQty = getRandomInt(
+            prof.orderQtyRange[0],
+            prof.orderQtyRange[1],
+          );
+          const qty = Math.max(1, Math.round(baseQty * multiplier));
+          return {
+            barang_id: b.id,
+            jumlah: qty,
+          };
+        });
 
         const permintaan = await prisma.permintaanBarang.create({
           data: {
@@ -324,7 +681,6 @@ async function main() {
           },
         });
 
-        // Barang dikirim BESOK harinya
         const besok = new Date(currentDate.getTime() + 24 * 60 * 60 * 1000);
         queuePermintaan.push({
           permintaan_id: permintaan.id,
@@ -335,10 +691,10 @@ async function main() {
     }
 
     // ------------------------------------------------------------------------
-    // LOGIKA C: PENGIRIMAN (BARANG KELUAR) FIFO
+    // LOGIKA 4: PENGIRIMAN PESANAN KELUAR DENGAN ALOKASI FIFO
     // ------------------------------------------------------------------------
     const pengirimanHariIni = queuePermintaan.filter(
-      (q) => q.tanggalKirim.getDate() === currentDate.getDate(),
+      (q) => q.tanggalKirim.getUTCDate() === currentDate.getUTCDate(),
     );
 
     for (const kirim of pengirimanHariIni) {
@@ -348,10 +704,10 @@ async function main() {
 
       for (const d of kirim.details) {
         let remainingToFulfill = d.jumlah;
-        const b = semuaBarang.find((item) => item.id === d.barang_id);
-        const hargaJual = Number((b as any).harga_jual);
+        const b = semuaBarangMaster.find((item) => item.id === d.barang_id);
+        const hargaJual = Number((b as any)?.harga_jual || b?.harga || 0);
 
-        const availableLots = lotFifoQueue.get(d.barang_id)!;
+        const availableLots = lotFifoQueue.get(d.barang_id) || [];
 
         for (
           let i = 0;
@@ -429,7 +785,7 @@ async function main() {
             stokSebelum: currentStokNow + d.jumlah,
             stokSesudah: currentStokNow,
             referensiId: trxKeluarId,
-            keterangan: `Pengiriman barang keluar (Ref: ${kirim.permintaan_id})`,
+            keterangan: `Pengiriman pesanan pelanggan via FIFO (Ref: ${kirim.permintaan_id})`,
             tanggal: kirim.tanggalKirim,
             createdAt: kirim.tanggalKirim,
           };
@@ -449,19 +805,17 @@ async function main() {
     }
 
     queuePermintaan = queuePermintaan.filter(
-      (q) => q.tanggalKirim.getDate() !== currentDate.getDate(),
+      (q) => q.tanggalKirim.getUTCDate() !== currentDate.getUTCDate(),
     );
-    currentDate.setDate(currentDate.getDate() + 1);
+    currentDate.setUTCDate(currentDate.getUTCDate() + 1);
   }
 
-  console.log(
-    '✅ SELESAI! Data dummy (Saldo Awal + Order Selang-Seling) berhasil digenerate.',
-  );
+  console.log('✅ SELESAI! Data simulasi seimbang berhasil digenerate.');
 }
 
 main()
   .catch((e) => {
-    console.error(e);
+    console.error('❌ Gagal menjalankan seeder:', e);
     process.exit(1);
   })
   .finally(async () => {

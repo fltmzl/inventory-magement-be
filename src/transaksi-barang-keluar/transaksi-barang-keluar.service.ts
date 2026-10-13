@@ -74,11 +74,13 @@ export class TransaksiBarangKeluarService {
 
           // Record detail for insertion
           detailsToInsert.push({
-            transaksiBarangKeluar_id: id,
             barang_id: item.id,
             nomorLot_id: lot.nomorLot_id,
             jumlah: deductQty,
-            hargaSatuan: barangMaster.harga,
+            hargaSatuan:
+              Number(barangMaster.harga_jual) > 0
+                ? barangMaster.harga_jual
+                : barangMaster.harga,
           });
 
           // Record stock movement OUT
@@ -117,12 +119,19 @@ export class TransaksiBarangKeluarService {
         });
       }
 
+      // Calculate actual total from details based on selling price
+      const calculatedHargaTotal = detailsToInsert.reduce(
+        (acc, curr) => acc + curr.jumlah * Number(curr.hargaSatuan),
+        0,
+      );
+
       // Create outgoing transaction header and bulk insert details
       const transaksiBarangKeluar = await tx.transaksiBarangKeluar.create({
         data: {
           id,
           tanggal,
-          hargaTotal,
+          hargaTotal:
+            calculatedHargaTotal > 0 ? calculatedHargaTotal : hargaTotal,
           permintaanBarang: {
             connect: {
               id: permintaanBarang_id,

@@ -26,6 +26,10 @@ export class CreateBarangDto {
   harga: number;
 
   @IsNotEmpty()
+  @IsNumber()
+  harga_jual: number;
+
+  @IsNotEmpty()
   @IsString()
   pembelianTerakhir: string;
 }

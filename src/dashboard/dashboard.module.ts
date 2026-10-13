@@ -5,6 +5,7 @@ import { PermintaanBarangModule } from 'src/permintaan-barang/permintaan-barang.
 import { PelangganModule } from 'src/pelanggan/pelanggan.module';
 import { DashboardController } from './dashboard.controller';
 import { TransaksiBarangKeluarModule } from 'src/transaksi-barang-keluar/transaksi-barang-keluar.module';
+import { StockMovementModule } from 'src/stock-movement/stock-movement.module';
 import { PrismaService } from 'src/prisma.service';
 
 @Module({
@@ -13,6 +14,7 @@ import { PrismaService } from 'src/prisma.service';
     PermintaanBarangModule,
     PelangganModule,
     TransaksiBarangKeluarModule,
+    StockMovementModule,
   ],
   controllers: [DashboardController],
   providers: [DashboardService, PrismaService],

@@ -117,6 +117,7 @@ export class PermintaanBarangService {
               select: {
                 nama: true,
                 harga: true,
+                harga_jual: true,
                 satuan: {
                   select: {
                     nama: true,
@@ -140,6 +141,7 @@ export class PermintaanBarangService {
         satuan: barangItem.barang.satuan.nama,
         jumlah: barangItem.jumlah,
         harga: Number(barangItem.barang.harga),
+        harga_jual: Number(barangItem.barang.harga_jual || 0),
       })),
       pegawai: {
         namaLengkap: permintaanBarang.pegawai.namaLengkap,

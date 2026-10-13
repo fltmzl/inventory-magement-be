@@ -1,10 +1,16 @@
-import { Controller, Get, Param, Query } from '@nestjs/common';
+import { Body, Controller, Get, Param, Post, Query } from '@nestjs/common';
 import { StockMovementService } from './stock-movement.service';
 import { MovementType } from '@prisma/client';
+import { CreateStockAdjustmentDto } from './dto/create-stock-adjustment.dto';
 
 @Controller('stock-movement')
 export class StockMovementController {
   constructor(private readonly stockMovementService: StockMovementService) {}
+
+  @Post('adjustment')
+  createAdjustment(@Body() createAdjustmentDto: CreateStockAdjustmentDto) {
+    return this.stockMovementService.createAdjustment(createAdjustmentDto);
+  }
 
   @Get()
   findAll(
@@ -32,6 +38,23 @@ export class StockMovementController {
     return this.stockMovementService.getSummary({
       dateFrom,
       dateTo,
+    });
+  }
+
+  @Get('weekly-summary')
+  getWeeklySummary(
+    @Query('month') month?: string,
+    @Query('year') year?: string,
+    @Query('from') from?: string,
+    @Query('to') to?: string,
+    @Query('barangId') barangId?: string,
+  ) {
+    return this.stockMovementService.getWeeklySummary({
+      month,
+      year,
+      from,
+      to,
+      barangId,
     });
   }
 

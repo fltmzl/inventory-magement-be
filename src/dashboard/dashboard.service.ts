@@ -3,6 +3,7 @@ import { BarangService } from 'src/barang/barang.service';
 import { PelangganService } from 'src/pelanggan/pelanggan.service';
 import { PermintaanBarangService } from 'src/permintaan-barang/permintaan-barang.service';
 import { TransaksiBarangKeluarService } from 'src/transaksi-barang-keluar/transaksi-barang-keluar.service';
+import { StockMovementService } from 'src/stock-movement/stock-movement.service';
 import { PrismaService } from 'src/prisma.service';
 
 @Injectable()
@@ -12,8 +13,19 @@ export class DashboardService {
     private readonly permintaanBarangService: PermintaanBarangService,
     private readonly pelangganService: PelangganService,
     private readonly transaksiBarangKeluarService: TransaksiBarangKeluarService,
+    private readonly stockMovementService: StockMovementService,
     private readonly prisma: PrismaService,
   ) {}
+
+  async getWeeklySummary(params?: {
+    month?: number | string;
+    year?: number | string;
+    from?: string | number;
+    to?: string | number;
+    barangId?: string;
+  }) {
+    return this.stockMovementService.getWeeklySummary(params);
+  }
 
   async getSummary() {
     const [
@@ -61,20 +73,21 @@ export class DashboardService {
     return await this.transaksiBarangKeluarService.getBestSellingItems(limit);
   }
 
-  async getTransactionTrend() {
-    const thirtyDaysAgo = new Date();
-    thirtyDaysAgo.setDate(thirtyDaysAgo.getDate() - 30);
+  async getTransactionTrend(days: number = 30) {
+    const targetDays = Math.max(1, Math.min(days, 180));
+    const startDate = new Date();
+    startDate.setDate(startDate.getDate() - targetDays);
 
     const [masuk, keluar] = await Promise.all([
       this.prisma.transaksiBarangMasuk.findMany({
-        where: { tanggal: { gte: thirtyDaysAgo } },
+        where: { tanggal: { gte: startDate } },
         select: {
           tanggal: true,
           barang: { select: { jumlah: true } },
         },
       }),
       this.prisma.transaksiBarangKeluar.findMany({
-        where: { tanggal: { gte: thirtyDaysAgo } },
+        where: { tanggal: { gte: startDate } },
         select: {
           tanggal: true,
           barang: { select: { jumlah: true } },
@@ -87,8 +100,8 @@ export class DashboardService {
       { tanggal: string; masuk: number; keluar: number }
     >();
 
-    // Initialize all 30 days
-    for (let i = 0; i < 30; i++) {
+    // Initialize all target days
+    for (let i = 0; i < targetDays; i++) {
       const d = new Date();
       d.setDate(d.getDate() - i);
       const dateStr = d.toISOString().split('T')[0];
